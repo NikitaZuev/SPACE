@@ -1,0 +1,126 @@
+header {
+  margin: 0;
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+}
+
+header .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 132px;
+  margin-left: 207px;
+}
+
+header .logo {
+  opacity: 0.9;
+}
+
+header .menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .menu-items .lang {
+  margin-left: 66px;
+  margin-right: 104px;
+}
+
+header button {
+  padding: 0;
+  color: #FFF;
+  background: none;
+  border: none;
+  font-family: DIN Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-content-one {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bg-section-one.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section-content-one .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 473px;
+}
+
+.section-content-one .description {
+  position: absolute;
+  left: 207px;
+  top: 833px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.section-content-one .description h2 {
+  margin: 0;
+}
+
+.section-content-one .description p {
+  margin: 0;
+  font-family: DIN Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.section-content-one::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 408px;
+  bottom: 0;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  width: 2px;
+  height: 35px;
+  margin-left: -1px;
+  background-color: #fff;
+  -webkit-animation: scrollLine 2s ease infinite;
+          animation: scrollLine 2s ease infinite;
+}
+
+.section-content-one .down {
+  position: absolute;
+  left: 1415px;
+  top: 876px;
+  font-family: DIN Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-content-one .rt_text::before {
+  content: attr(data-hover);
+  display: inline-block;
+  height: 100%;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
