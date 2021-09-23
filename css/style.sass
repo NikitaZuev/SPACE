@@ -14,6 +14,11 @@ header
       .lang
         margin-left: 66px
         margin-right: 104px
+      .menu-btn
+        z-index: 999999
+        position: fixed
+        left: 90%
+        top: 8px
       button
         padding: 0
         color: #FFF
@@ -26,21 +31,41 @@ header
         line-height: 22px;
         text-align: center;
         text-transform: uppercase;
-  .menu__box
-    display: block
-    position: fixed
-    visibility: hidden
-    top: 0
-    right: -100%
-    min-width: 38.19444vw
-    height: 100%
-    margin: 0
-    padding: 80px 0
-    list-style: none
-    background:  #00040F
-    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
-    transition-duration: .5s
-    transform: matrix(1, 0, -0.36794, 1, -650, 0) 
+
+.menu__box
+  display: block
+  position: fixed
+  visibility: hidden
+  top: 0
+  right: -100%
+  min-width: 38.19444vw
+  height: 100%
+  margin: 0
+  padding: 80px 0
+  list-style: none
+  background: #000
+  background-image: url(../img/stars.png)
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
+  transition-duration: .5s
+  transform: matrix(1, 0, -0.36794, 1, -650, 0)
+  ul
+    list-style-type: none
+    .menu__item
+      display: block;
+      padding: 25px 0px;
+      color: #fff;
+      font-family: 'Europeext normal', arial;
+      font-size: 36px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform .5s ease;
+      text-align: center;
+      text-decoration: none
+      color: #FFF
+.open
+  visibility: visible
+  right: 0;
+  transform: matrix(1, 0, 0, 1.03528, 0, 0);
 .section-content-one
   position: absolute
   width: 100%
@@ -115,3 +140,62 @@ header
   top: 100%
   width: 100%
   height: 100%
+  background: url(../img/bg-section-two.png)
+  background-size: cover
+  background-repeat: no-repeat
+  z-index: -1
+  &::before
+    content: ''
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.38) 100%)
+    opacity: 0.9
+    z-index: 1
+.service
+  display: flex
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+.service__info
+  display: flex
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  text-decoration: none
+  color: #FFF
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  &:hover
+    color: #FFFF
+.service__info_body
+  z-index: 100
+.service__info_link--active:first-child~.plank__box
+  transform: translate3d(-100%,0,0)
+.service__info_link--active:nth-child(2)~.plank__box
+  transform: translateZ(0)
+.service__info_link--active:nth-child(3)~.plank__box
+  transform: translate3d(100%,0,0)
+.plank__box 
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 33.3333%;
+  margin: 0 auto;
+  background-image: url(../img/bg-section-two.png)
+  box-shadow: 0px 0px 100px #000000, 0px 0px 100px #000000;
+  transition: .4s ease-out;
+  z-index: 15
+
+
+
+
