@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var wrapperMenu = document.querySelector('.menu');
+  var wrapperMenu = document.querySelector('.wrapper-menu');
   var wrapperMenuOpen = document.querySelector('.menu__box');
 
   wrapperMenu.addEventListener('click', function(){
@@ -11,6 +11,6 @@ $(document).ready(function () {
   $('.service__info').mouseover(           
     function(){ //при наведении на любую ссылку указанного class'a  
          $('.service__info').removeClass('service__info_link--active'); // у всех удаляем class
-         $(this).addClass('service__info_link--active') }  // а этой ссылке добавляем
+         $(this).addClass('service__info_link--active') } // а этой ссылке добавляем
   );     
 });

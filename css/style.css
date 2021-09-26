@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'DIN Pro';
+  src: url(../fonts/DINPro.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Monsterrat';
+  src: url(../fonts/Monsterrat-SemiBold.ttf) format("truetype");
+}
+
 header {
   margin: 0;
   position: absolute;
@@ -40,7 +50,7 @@ header .navbar .menu-items button {
   color: #FFF;
   background: none;
   border: none;
-  font-family: DIN Pro;
+  font-family: 'DIN Pro';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -91,7 +101,95 @@ header .navbar .menu-items button {
   color: #FFF;
 }
 
-.open {
+.wrapper-menu {
+  width: 37px;
+  height: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 500ms ease-out;
+  transition: -webkit-transform 500ms ease-out;
+  transition: transform 500ms ease-out;
+  transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
+  z-index: 999999;
+  left: 90%;
+  top: 20px;
+  position: fixed;
+}
+
+.wrapper-menu.open {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.line-menu {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  height: 3px;
+}
+
+.line-menu.half {
+  width: 50%;
+}
+
+.line-menu.start {
+  -webkit-transition: -webkit-transform 230ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: -webkit-transform 230ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 230ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 230ms cubic-bezier(0.54, -0.81, 0.57, 0.57), -webkit-transform 230ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.wrapper-menu:hover .start {
+  -webkit-transform: translateX(19px);
+  transform: translateX(19px);
+  -webkit-transition: -webkit-transform 300ms ease-out;
+  transition: -webkit-transform 300ms ease-out;
+  transition: transform 300ms ease-out;
+  transition: transform 300ms ease-out, -webkit-transform 300ms ease-out;
+}
+
+.wrapper-menu:hover .end {
+  -webkit-transform: translateX(-19px);
+  transform: translateX(-19px);
+  -webkit-transition: -webkit-transform 300ms ease-out;
+  transition: -webkit-transform 300ms ease-out;
+  transition: transform 300ms ease-out;
+  transition: transform 300ms ease-out, -webkit-transform 300ms ease-out;
+}
+
+.open .line-menu.start {
+  -webkit-transform: rotate(-90deg) translateX(3px);
+          transform: rotate(-90deg) translateX(3px);
+}
+
+.line-menu.end {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-transition: -webkit-transform 230ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: -webkit-transform 230ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 230ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 230ms cubic-bezier(0.54, -0.81, 0.57, 0.57), -webkit-transform 230ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.open .line-menu.end {
+  -webkit-transform: rotate(-90deg) translateX(-3px);
+          transform: rotate(-90deg) translateX(-3px);
+}
+
+.menu__box.open {
   visibility: visible;
   right: 0;
   -webkit-transform: matrix(1, 0, 0, 1.03528, 0, 0);
@@ -106,6 +204,7 @@ header .navbar .menu-items button {
   background-size: cover;
   background-repeat: no-repeat;
   top: 0%;
+  overflow: hidden;
 }
 
 .section-content-one::after {
@@ -174,7 +273,7 @@ header .navbar .menu-items button {
   text-transform: uppercase;
 }
 
-.section-content-one .rt_text::before {
+.rt_text::before {
   content: attr(data-hover);
   display: inline-block;
   height: 100%;
@@ -220,19 +319,7 @@ header .navbar .menu-items button {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
-}
-
-.section-content-two::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(rgba(0, 0, 0, 0.38)));
-  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.38) 100%);
-  opacity: 0.9;
-  z-index: 1;
+  overflow: hidden;
 }
 
 .service {
@@ -254,8 +341,9 @@ header .navbar .menu-items button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-decoration: none;
   color: #FFF;
   font-family: Montserrat;
@@ -265,44 +353,52 @@ header .navbar .menu-items button {
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(rgba(0, 0, 0, 0.38)));
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.38) 100%);
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
 }
 
 .service__info:hover {
   color: #FFFF;
+  background: none;
+}
+
+.service__info::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  width: 2px;
+  height: 35px;
+  margin-left: -1px;
+  background-color: #fff;
+  -webkit-animation: scrollLine 2s ease infinite;
+          animation: scrollLine 2s ease infinite;
+}
+
+.service__info .button-qury {
+  position: absolute;
+  bottom: 5%;
+  font-family: DIN Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.service__info_link--active {
+  -webkit-box-shadow: 0px 0px 100px #000000, 0px 0px 100px #000000;
+          box-shadow: 0px 0px 100px #000000, 0px 0px 100px #000000;
 }
 
 .service__info_body {
   z-index: 100;
-}
-
-.service__info_link--active:first-child ~ .plank__box {
-  -webkit-transform: translate3d(-100%, 0, 0);
-          transform: translate3d(-100%, 0, 0);
-}
-
-.service__info_link--active:nth-child(2) ~ .plank__box {
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-}
-
-.service__info_link--active:nth-child(3) ~ .plank__box {
-  -webkit-transform: translate3d(100%, 0, 0);
-          transform: translate3d(100%, 0, 0);
-}
-
-.plank__box {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 33.3333%;
-  margin: 0 auto;
-  background-image: url(../img/bg-section-two.png);
-  -webkit-box-shadow: 0px 0px 100px #000000, 0px 0px 100px #000000;
-          box-shadow: 0px 0px 100px #000000, 0px 0px 100px #000000;
-  -webkit-transition: .4s ease-out;
-  transition: .4s ease-out;
-  z-index: 15;
 }
 /*# sourceMappingURL=style.css.map */
