@@ -282,7 +282,7 @@ header
     height: 100%
     width: 100%
     align-items: center
-    justify-content: space-evenly;
+    justify-content: space-around;
     .reviews-content
       width: 380px;
       height: 100%;
@@ -293,8 +293,49 @@ header
       .author
         display: flex
         align-items: center
+        img
+          height: 70px
+          width:  70px
+          filter: drop-shadow(0px 4px 15px rgba(68, 117, 226, 0.15))
+      .dots
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        ul
+          display: flex
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-evenly
+          width: 50%
+          list-style-type: none
+          li
+            &::before
+              content: "\2022";  /* юникод точки */
+              color: #FFF; /* Менять цвет */
+              font-weight: bold; /* Менять жирность */
+              display: inline-block; /* Расстояние между точкой и текстом */
+              font-size: 40px
+              height: 17px
+              width: 17px
     .reviews-planet
       .text-circle
+        p
+          position: absolute
+        .one
+          top: 15%
+          right: 33%
+        .two
+          top: 30%
+          right: 39%
+        .three
+          top: 50%
+          right: 42%
+        .four
+          top: 70%
+          right: 39%
+        .five
+          top: 85%
+          right: 32%
       .circle
         width: 700px
         height: 700px
@@ -303,25 +344,12 @@ header
         position: absolute;
         right: 4%;
         top: 16%;
-.stripe
-  content: '';
-  position: absolute;
-  top: 20%;
-  width: calc( 700px * .2);
-  height: 100%
-  border-radius: 100%;
-  transition: all 300ms ease;
-  &::after
-    content: '';
-    position: absolute;
-    left: calc(50% - .4em);
-    top: -.4em;
-    height: .8em;
-    width: .8em;
-    background: #78FFCD;
-    border-radius: 1em;
-    border: .25em solid #FFF;
-    box-shadow: 0 0 .7em #FFF,0 0 2em #78FFCD;
+        transition: all 0.5s ease-out
+.stripe-svg
+  position: absolute
+  left: 20%
+  top: .5%
+  transform: rotate(0.1rad)
 
         
 
