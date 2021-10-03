@@ -235,8 +235,7 @@ header
   background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.38) 100%)
   transition: all 2s ease-out
   &:hover
-    color: #FFFF
-    background: none
+    color: #FFF
   &::after
     content: ""
     display: block;
@@ -261,6 +260,28 @@ header
   
 .service__info_link--active
   box-shadow: 0px 0px 100px #000000, 0px 0px 100px #000000;
+  background: none
+  transition: all 2s ease-out
+
+.service__info_link--active:first-child~.plank__box
+    transform: translate3d(-100%,0,0);
+
+.service__info_link--active:nth-child(2)~.plank__box
+    transform: translateZ(0);
+    
+.service__info_link--active:nth-child(3)~.plank__box
+    transform: translate3d(100%,0,0);
+
+.plank__box 
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 33.3333%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 100px #000000, 0px 0px 100px #000000;
+  transition: 2s ease-out;
 
 .service__info_body
   z-index: 100
@@ -270,7 +291,7 @@ header
   top: 200%
   width: 100%
   height: 100%
-  background: url(../img/bg-section-three.png)
+  background: url(../img/bg-section-threee.png)
   background-size: cover
   background-repeat: no-repeat
   background-position: center center
@@ -318,39 +339,49 @@ header
               height: 17px
               width: 17px
     .reviews-planet
+      display: flex
+      width: 900px;
+      justify-content: space-between
       .text-circle
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         p
-          position: absolute
+          position: relative
         .one
-          top: 15%
-          right: 33%
+          left: 110%
         .two
-          top: 30%
-          right: 39%
-        .three
-          top: 50%
-          right: 42%
+          left: 20%
         .four
-          top: 70%
-          right: 39%
+          left: 20%
         .five
-          top: 85%
-          right: 32%
+          left: 110%
       .circle
         width: 700px
         height: 700px
         border: 1px solid #2f2f2f
         border-radius: 100%
-        position: absolute;
+        position: relative;
         right: 4%;
         top: 16%;
         transition: all 0.5s ease-out
+        display: flex
+        align-items: center;
+        justify-content: center;
+        .planet
+          float: right
 .stripe-svg
   position: absolute
   left: 20%
   top: .5%
   transform: rotate(0.1rad)
-
+  transition: all 1s ease
+@keyframes two-translate
+  0%
+    transform: translate(-50%,35%) rotate(-0.1rad)
+  100%
+    transform: translate(-170%,200%) rotate(-0.5rad)
+    
         
 
 

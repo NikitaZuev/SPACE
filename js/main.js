@@ -21,27 +21,27 @@ $(document).ready(function () {
   var angle = Math.atan2(event.y - cy, event.x - cx);
   
   div.style.transform = "rotate(" + angle + "rad)"
-})*/
+});*/
 $(document).ready(function(){
-  var div = document.querySelector(".circle");
+  var div = document.querySelector(".stripe-svg");
   $('.one').mouseenter(
     function(){
-        div.style.transform = "rotate(" + -0.1 + "rad)"}
+        div.style.transform = "translate(" + -50 + "%," + 35 + "%"  +  ")" + "rotate(" + -0.1 + "rad)"}
   )
   $('.two').mouseenter(
     function(){
-        div.style.transform = "rotate(" + -0.6 + "rad)"}
+        div.style.animation = "two-translate" + " " + 2 + "s" + " " + "ease" + " "}
   )
   $('.three').mouseenter(
     function(){
-        div.style.transform = "rotate(" + -1.1 + "rad)"}
+        div.style.transform = "translate(" + -50 + "%," + 35 + "%"  +  ")" + "rotate(" + -0.1 + "rad)"}
   )
   $('.four').mouseenter(
     function(){
-        div.style.transform = "rotate(" + -1.6 + "rad)"}
+        div.style.transform = "translate(" + -50 + "%," + 35 + "%"  +  ")" + "rotate(" + -0.1 + "rad)"}
   )
   $('.five').mouseenter(
     function(){
-        div.style.transform = "rotate(" + -2.1 + "rad)"}
+        div.style.transform = "translate(" + -50 + "%," + 35 + "%"  +  ")" + "rotate(" + -0.1 + "rad)"}
   )
 })

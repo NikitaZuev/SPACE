@@ -357,8 +357,7 @@ header .navbar .menu-items button {
 }
 
 .service__info:hover {
-  color: #FFFF;
-  background: none;
+  color: #FFF;
 }
 
 .service__info::after {
@@ -391,6 +390,38 @@ header .navbar .menu-items button {
 .service__info_link--active {
   -webkit-box-shadow: 0px 0px 100px #000000, 0px 0px 100px #000000;
           box-shadow: 0px 0px 100px #000000, 0px 0px 100px #000000;
+  background: none;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+
+.service__info_link--active:first-child ~ .plank__box {
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+}
+
+.service__info_link--active:nth-child(2) ~ .plank__box {
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.service__info_link--active:nth-child(3) ~ .plank__box {
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
+
+.plank__box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 33.3333%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 100px #000000, 0px 0px 100px #000000;
+          box-shadow: 0px 0px 100px #000000, 0px 0px 100px #000000;
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
 }
 
 .service__info_body {
@@ -402,7 +433,7 @@ header .navbar .menu-items button {
   top: 200%;
   width: 100%;
   height: 100%;
-  background: url(../img/bg-section-three.png);
+  background: url(../img/bg-section-threee.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -498,33 +529,47 @@ header .navbar .menu-items button {
   width: 17px;
 }
 
+.section-content-three .reviews .reviews-planet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 900px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-content-three .reviews .reviews-planet .text-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .section-content-three .reviews .reviews-planet .text-circle p {
-  position: absolute;
+  position: relative;
 }
 
 .section-content-three .reviews .reviews-planet .text-circle .one {
-  top: 15%;
-  right: 33%;
+  left: 110%;
 }
 
 .section-content-three .reviews .reviews-planet .text-circle .two {
-  top: 30%;
-  right: 39%;
-}
-
-.section-content-three .reviews .reviews-planet .text-circle .three {
-  top: 50%;
-  right: 42%;
+  left: 20%;
 }
 
 .section-content-three .reviews .reviews-planet .text-circle .four {
-  top: 70%;
-  right: 39%;
+  left: 20%;
 }
 
 .section-content-three .reviews .reviews-planet .text-circle .five {
-  top: 85%;
-  right: 32%;
+  left: 110%;
 }
 
 .section-content-three .reviews .reviews-planet .circle {
@@ -532,11 +577,24 @@ header .navbar .menu-items button {
   height: 700px;
   border: 1px solid #2f2f2f;
   border-radius: 100%;
-  position: absolute;
+  position: relative;
   right: 4%;
   top: 16%;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-content-three .reviews .reviews-planet .circle .planet {
+  float: right;
 }
 
 .stripe-svg {
@@ -545,5 +603,29 @@ header .navbar .menu-items button {
   top: .5%;
   -webkit-transform: rotate(0.1rad);
           transform: rotate(0.1rad);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+@-webkit-keyframes two-translate {
+  0% {
+    -webkit-transform: translate(-50%, 35%) rotate(-0.1rad);
+            transform: translate(-50%, 35%) rotate(-0.1rad);
+  }
+  100% {
+    -webkit-transform: translate(-170%, 200%) rotate(-0.5rad);
+            transform: translate(-170%, 200%) rotate(-0.5rad);
+  }
+}
+
+@keyframes two-translate {
+  0% {
+    -webkit-transform: translate(-50%, 35%) rotate(-0.1rad);
+            transform: translate(-50%, 35%) rotate(-0.1rad);
+  }
+  100% {
+    -webkit-transform: translate(-170%, 200%) rotate(-0.5rad);
+            transform: translate(-170%, 200%) rotate(-0.5rad);
+  }
 }
 /*# sourceMappingURL=style.css.map */
