@@ -23,25 +23,33 @@ $(document).ready(function () {
   div.style.transform = "rotate(" + angle + "rad)"
 });*/
 $(document).ready(function(){
-  var div = document.querySelector(".stripe-svg");
+  var div = document.querySelector(".circle");
   $('.one').mouseenter(
     function(){
-        div.style.transform = "translate(" + -50 + "%," + 35 + "%"  +  ")" + "rotate(" + -0.1 + "rad)"}
+        div.style.transform = "rotate(" + -0.2 + "rad)"}
   )
   $('.two').mouseenter(
     function(){
-        div.style.animation = "two-translate" + " " + 2 + "s" + " " + "ease" + " "}
+        div.style.transform = "rotate(" + -0.7 + "rad)"}
   )
   $('.three').mouseenter(
     function(){
-        div.style.transform = "translate(" + -50 + "%," + 35 + "%"  +  ")" + "rotate(" + -0.1 + "rad)"}
+        div.style.transform = "rotate(" + -1.1 + "rad)"}
   )
   $('.four').mouseenter(
     function(){
-        div.style.transform = "translate(" + -50 + "%," + 35 + "%"  +  ")" + "rotate(" + -0.1 + "rad)"}
+        div.style.transform = "rotate(" + -1.5 + "rad)"}
   )
   $('.five').mouseenter(
     function(){
-        div.style.transform = "translate(" + -50 + "%," + 35 + "%"  +  ")" + "rotate(" + -0.1 + "rad)"}
-  )
-})
+        div.style.transform = "rotate(" + -1.9 + "rad)"}
+  );
+});
+$(document).ready(function() {
+ 
+  $('input[type="file"]').change(function(){
+      var value = $("input[type='file']").val();
+      $('.js-fileName').text(value);
+  });
+
+});

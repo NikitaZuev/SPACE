@@ -4,8 +4,10 @@
 
 @font-face 
 	font-family: 'Monsterrat'; 
-	src: url(../fonts/Monsterrat-SemiBold.ttf) format('truetype'); 
-
+	src: url(../fonts/Montserrat-SemiBold.ttf) format('truetype'); 
+a
+  color: #fff
+  text-decoration: none
 header
   margin: 0
   position: absolute
@@ -342,6 +344,8 @@ header
       display: flex
       width: 900px;
       justify-content: space-between
+      .planet-content
+        position: relative
       .text-circle
         display: flex;
         flex-direction: column;
@@ -362,27 +366,163 @@ header
         border: 1px solid #2f2f2f
         border-radius: 100%
         position: relative;
-        right: 4%;
-        top: 16%;
-        transition: all 0.5s ease-out
+        transition: all 1s ease-out
         display: flex
         align-items: center;
         justify-content: center;
-        .planet
-          float: right
+      .planet
+        position: absolute
+        top: 5%
+        left: 5%
 .stripe-svg
   position: absolute
   left: 20%
   top: .5%
   transform: rotate(0.1rad)
-  transition: all 1s ease
-@keyframes two-translate
-  0%
-    transform: translate(-50%,35%) rotate(-0.1rad)
-  100%
-    transform: translate(-170%,200%) rotate(-0.5rad)
-    
-        
+
+.section-content-four
+  position: absolute
+  top: 300%
+  width: 100%
+  height: 100%
+  background: url(../img/bg-section-four.png)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: 
+  z-index: -1
+  overflow: hidden
+  color: #FFF
+  .section-content-four-content
+    display: flex
+    width: 100%
+    height: 100%
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase
+    .header-choise
+      display: flex
+      width: 60%;
+      justify-content: flex-start;
+      border-bottom: 1px solid
+      padding-bottom: 22px
+      font-family: Monsterrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 34px;
+      a
+        padding-right: 70px
+        opacity: 0.5
+        &:hover
+          color: #FFF
+        &:active
+          opacity: 1
+    .information
+      display: flex
+      width: 60%
+      justify-content: space-between
+      margin-top: 110px
+      .personal-information
+        display: flex
+        flex-direction: column
+        width: 40%
+        h5
+          padding-bottom: 64px
+          font-family: DIN Pro;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 30px;
+        .data
+          display: flex
+          flex-direction: column
+          .input-information
+            background: none
+            border-bottom: 1px solid #fff
+            border-top: 0
+            border-left: 0
+            border-right: 0
+            color: #FFF
+            margin-bottom: 44px
+            &::-webkit-input-placeholder 
+              color: #FFF
+              font-family: DIN Pro;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 18px;
+              line-height: 22px;
+            &:focus-visible 
+              outline: 0
+            &:focus
+              color: #FFF
+          .message
+            padding-bottom: 83px
+    .budget
+      display: flex
+      flex-direction: column
+      width: 50%
+      h5
+        margin-bottom: 99px
+        font-family: DIN Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 30px;
+      .line
+        margin-bottom: 116px
+        position: relative
+        &::before
+          content: ''
+          display: block
+          height: 1px
+          border-bottom: 1px solid 
+          opacity: 0.5
+        .ball
+          background: radial-gradient(87.48% 87.44% at 74.14% 28.44%, #FFFFFF 0%, #FBFCFE 7.05%, #EEF2F9 14.31%, #DAE2F2 21.68%, #BDCCE9 29.12%, #98AFDC 36.6%, #6B8CCD 44.03%, #3D68BD 50.54%, #3C67BB 50.87%, #234179 61.54%, #102649 70.51%, #04152C 77.34%, #000F21 81.22%, #0D1F35 84.36%, #2F4769 90.79%, #6488BB 99.88%, #6589BC 100%);
+          width: 17px
+          height: 17px
+          border-radius: 100%
+          position: absolute
+          top: -10%
+          border: none
+          &:active
+            transform: scale(1.9,1.9)
+        .two
+          position: absolute
+          left: 50%
+        .three
+          position: absolute
+          left: 100%
+      .text
+        margin-top: 27px
+        display: flex
+        justify-content: space-between
+      .form-control
+        margin-bottom: 120px
+        background: none
+        border: none
+        .js-fileName
+          background: none
+          border: none
+          font-family: DIN Pro;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 25px;
+          color: #FFF
+      .accept
+        background: none
+        border: none
+        text-align: right
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 33px;
+        line-height: 40px;
+        text-transform: uppercase;
+        color: #FFF
 
 
 
