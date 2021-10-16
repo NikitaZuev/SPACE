@@ -3,11 +3,14 @@
 	src: url(../fonts/DINPro.ttf) format('truetype'); 
 
 @font-face 
-	font-family: 'Monsterrat'; 
+	font-family: 'Montserrat'; 
 	src: url(../fonts/Montserrat-SemiBold.ttf) format('truetype'); 
 a
   color: #fff
   text-decoration: none
+button
+  &:focus
+    box-shadow: none !important
 header
   margin: 0
   position: absolute
@@ -19,6 +22,7 @@ header
     margin-left: 207px
     .logo
       opacity: 0.9;
+      padding-top: 11px
     .menu-items
       display: flex
       .lang
@@ -381,23 +385,27 @@ header
   transform: rotate(0.1rad)
 
 .section-content-four
-  position: absolute
-  top: 300%
-  width: 100%
-  height: 100%
+  display: block
+  position: fixed
+  visibility: hidden
+  top: 50%
+  right: 50%
   background: url(../img/bg-section-four.png)
   background-size: cover
   background-repeat: no-repeat
   background-position: 
-  z-index: -1
+  z-index: 100
   overflow: hidden
   color: #FFF
+  width: 1%
+  height: 1%
+  transition: all .8s ease
+
   .section-content-four-content
     display: flex
     width: 100%
     height: 100%
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-transform: uppercase
@@ -407,18 +415,24 @@ header
       justify-content: flex-start;
       border-bottom: 1px solid
       padding-bottom: 22px
-      font-family: Monsterrat;
+      font-family: Montserrat;
       font-style: normal;
       font-weight: 600;
       font-size: 28px;
       line-height: 34px;
-      a
+      button
         padding-right: 70px
         opacity: 0.5
+        color: #FFF
+        background: none
+        border: none
         &:hover
           color: #FFF
         &:active
           opacity: 1
+      .header-choise-btn--active
+        color: #FFF
+        opacity: 1
     .information
       display: flex
       width: 60%
@@ -438,27 +452,22 @@ header
         .data
           display: flex
           flex-direction: column
-          .input-information
-            background: none
-            border-bottom: 1px solid #fff
-            border-top: 0
-            border-left: 0
-            border-right: 0
-            color: #FFF
-            margin-bottom: 44px
-            &::-webkit-input-placeholder 
+          .form-floating
+            .form-control
+              background: none
+              border-top: none
+              border-left: none                   
+              border-right: none
+              border-radius: 0
               color: #FFF
-              font-family: DIN Pro;
-              font-style: normal;
-              font-weight: normal;
-              font-size: 18px;
-              line-height: 22px;
-            &:focus-visible 
-              outline: 0
-            &:focus
-              color: #FFF
-          .message
-            padding-bottom: 83px
+              padding-top: 20px
+              padding-left: 0
+              padding-bottom: 0
+              &:focus
+                border-color: #FFF
+                box-shadow: none
+            .label-form
+              padding: 10px 0;
     .budget
       display: flex
       flex-direction: column
@@ -473,32 +482,41 @@ header
       .line
         margin-bottom: 116px
         position: relative
-        &::before
-          content: ''
-          display: block
-          height: 1px
-          border-bottom: 1px solid 
-          opacity: 0.5
+        .form-label
+          width: 100%
+          text-align: center
+        .form-range
+          &::-webkit-slider-thumb
+            background: radial-gradient(87.48% 87.44% at 74.14% 28.44%, #FFFFFF 0%, #FBFCFE 7.05%, #EEF2F9 14.31%, #DAE2F2 21.68%, #BDCCE9 29.12%, #98AFDC 36.6%, #6B8CCD 44.03%, #3D68BD 50.54%, #3C67BB 50.87%, #234179 61.54%, #102649 70.51%, #04152C 77.34%, #000F21 81.22%, #0D1F35 84.36%, #2F4769 90.79%, #6488BB 99.88%, #6589BC 100%);
+            height: 32px
+            width: 32px
+            position: relative
+            bottom: 10px
+            z-index: 50
+          &::-webkit-slider-runnable-track
+            height: 1px
+            background: rgba(255, 255, 255, 0.5)
+            align-self: center
         .ball
           background: radial-gradient(87.48% 87.44% at 74.14% 28.44%, #FFFFFF 0%, #FBFCFE 7.05%, #EEF2F9 14.31%, #DAE2F2 21.68%, #BDCCE9 29.12%, #98AFDC 36.6%, #6B8CCD 44.03%, #3D68BD 50.54%, #3C67BB 50.87%, #234179 61.54%, #102649 70.51%, #04152C 77.34%, #000F21 81.22%, #0D1F35 84.36%, #2F4769 90.79%, #6488BB 99.88%, #6589BC 100%);
           width: 17px
           height: 17px
           border-radius: 100%
           position: absolute
-          top: -10%
+          top: 5%
           border: none
-          &:active
-            transform: scale(1.9,1.9)
+          z-index: 10
         .two
           position: absolute
-          left: 50%
+          left: 49%
         .three
           position: absolute
-          left: 100%
+          left: 97%
       .text
-        margin-top: 27px
+
         display: flex
         justify-content: space-between
+        background: none
       .form-control
         margin-bottom: 120px
         background: none
@@ -523,6 +541,139 @@ header
         line-height: 40px;
         text-transform: uppercase;
         color: #FFF
+.section-content-four.open
+    visibility: visible
+    top: 0
+    right: 0
+    width: 100%
+    height: 100%
+
+.closed-menu 
+  width: 37px
+  height: 17px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  cursor: pointer
+  transition: transform 500ms ease-out
+  z-index: 999999
+  position: relative;
+  right: -29%;
+  top: 40%;
+
+.closed-menu.open 
+  transform: rotate(-45deg)
+
+.line-menu-closed 
+  background-color: #fff
+  border-radius: 5px
+  width: 100%
+  height: 3px
 
 
+.line-menu--closed.half 
+  width: 50%
+
+
+.line-menu-closed.start 
+
+
+
+.closed-menu:hover.start 
+  transition: transform 300ms ease-out
+
+.closed-menu:hover.end 
+  -webkit-transform: translateX(-19px)
+  transform: translateX(-19px)
+  transition: transform 300ms ease-out
+
+
+.open .line-menu-closed.start 
+  transform: rotate(90deg) translateX(14px)
+
+
+.line-menu-closed.end 
+  align-self: flex-end
+  transition: transform 230ms cubic-bezier(0.54, -0.81, 0.57, 0.57)
+  transform-origin: left
+
+
+.open .line-menu-closed.end 
+  transform: rotate(-90deg) translateX(-3px)
+
+.section-content-five
+  position: absolute
+  top: 300%
+  width: 100%
+  height: 100%
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+  z-index: -1
+  overflow: hidden
+  color: #FFF
+  background: linear-gradient(180deg, #010003 0%, #07041E 29.17%, #07041E 30.73%, #111C4D 50.52%, #07041E 75.52%, #010206 100%), #000001;
+  display: flex
+  align-items: center;
+  .section-content-five-content
+    display: flex
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+    height: 100%
+    width: 100%
+    .popylar-q-text
+      display: flex
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 33px;
+      line-height: 40px;
+      text-transform: uppercase; 
+      margin-bottom: 100px;
+    .popylar-q
+      display: flex
+      width: 60%;
+      justify-content: space-evenly;
+      .accordion
+        width: 540px
+        .accordion-item
+          border-radius: 10px
+          border: none
+          margin-right: 25px;
+          margin-bottom: 30px;
+          width: 540px
+          background: none
+          .accordion-header
+            .accordion-button
+              color: #FFF
+              background: #00A5CA;
+              border-radius: 10px
+              box-shadow: 0px 4px 15px rgba(68, 117, 226, 0.15);
+              padding-left: 43px
+              &::after
+                content: '+'
+                background-image: none
+                transform: none
+            .accordion-button.collapsed
+              background: rgba(255, 255, 255, 0.2)
+              color: #FFF
+              box-shadow: 0px 4px 15px rgba(68, 117, 226, 0.15);
+              padding-left: 43px
+              &::before
+                content: ''
+                display: block
+                position: absolute
+                width: 5%
+                height: 100%
+                background: #0BB2FF;
+                left: 0
+                border-radius: 10px 0 0 10px
+              &::after
+                color: #85E3FD
+        .accordion-body
+          background: rgba(133, 227, 253,0.2 );
+          border-radius: 10px
+          margin-bottom: 30px
+          padding: 24px 29px 25px 27px
 

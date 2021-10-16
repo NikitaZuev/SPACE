@@ -14,14 +14,6 @@ $(document).ready(function () {
          $(this).addClass('service__info_link--active') } // а этой ссылке добавляем
   );     
 });
-/*document.addEventListener('mousemove', function (event) {
-  var div = document.querySelector(".circle");
-  var bb = div.getBoundingClientRect();
-  var cx = bb.left + bb.width / 2, cy = bb.top + bb.height / 2;
-  var angle = Math.atan2(event.y - cy, event.x - cx);
-  
-  div.style.transform = "rotate(" + angle + "rad)"
-});*/
 $(document).ready(function(){
   var div = document.querySelector(".circle");
   $('.one').mouseenter(
@@ -48,8 +40,45 @@ $(document).ready(function(){
 $(document).ready(function() {
  
   $('input[type="file"]').change(function(){
-      var value = $("input[type='file']").val();
+      var value = $("input[type='file']").val().split('/').pop().split('\\').pop();
       $('.js-fileName').text(value);
+      if ($("input[type='file']").val() == ''){
+        $('.js-fileName').text('Прикрепить файл+');
+      }
   });
 
+});
+
+$(document).ready(function(){
+  $('#output').text($('#range').val());  
+	$('#range').mousemove(function() {
+    if($('#range').val() == '0'){
+      $('#output').text("Я не знаю");
+      $('#rub').text('');
+    }
+    else{
+      $('#output').text($('#range').val());
+      $('#rub').text('Руб');
+    }
+	});
+})
+$(document).ready(function () {
+  $('.header-choise-btn').click(           
+    function(){ //при наведении на любую ссылку указанного class'a  
+         $('.header-choise-btn').removeClass('header-choise-btn--active'); // у всех удаляем class
+         $(this).addClass('header-choise-btn--active') } // а этой ссылке добавляем
+  );     
+});
+$(document).ready(function(){
+  var SectionOrder = document.querySelector('.form-order');
+  var SectionOrderOpen = document.querySelector('.section-content-four');
+  var SectionOrderClose = document.querySelector('.closed-menu')
+  SectionOrder.addEventListener('click', function(){
+    SectionOrder.classList.toggle('open');  
+    SectionOrderOpen.classList.toggle('open');  
+  });
+  SectionOrderClose.addEventListener('click', function(){
+    SectionOrder.classList.toggle('open');  
+    SectionOrderOpen.classList.toggle('open');  
+  });
 });

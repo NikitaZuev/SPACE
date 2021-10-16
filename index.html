@@ -5,9 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SPACE</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
   <link href="css/style.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </head>
 <body>
   <header class="header-area">
@@ -147,26 +146,43 @@
     <section class="section-content-four">
       <div class="section-content-four-content">
         <div class="header-choise">
-          <a class="header-choise-one">Графический дизайн</a>
-          <a class="header-choise-two">Web дизайн</a>
-          <a class="header-choise-three">3d</a>
+          <button class="header-choise-btn one">Графический дизайн</button>
+          <button class="header-choise-btn two">Web дизайн</button>
+          <button class="header-choise-btn three">3d</button>
+          <div class="closed-menu open">
+            <div class="line-menu-closed  start"></div>
+            <div class="line-menu-closed"></div>
+          </div>
         </div>
         <div class="information">
           <div class="personal-information">
             <h5>Данные</h5>
             <form class="data">
-              <input type="text" class="input-information" placeholder="Имя*" required>
-              <input type="text" class="input-information" placeholder="Email*" required>
-              <input type="text" class="input-information" placeholder="Телефон*" required>
-              <input type="text" class="input-information message" placeholder="Сообщение">
+              <div class="form-floating mb-3">
+                <input type="name" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label class="label-form" for="floatingInput">Имя*</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label class="label-form" for="floatingInput">Email*</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label class="label-form" for="floatingInput">Телефон*</label>
+              </div>
+              <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 83px"></textarea>
+                <label class="label-form" for="floatingTextarea2">Сообщение</label>
+              </div>
             </form>
           </div>
           <div class="budget">
-            <h5>Бюджет проекта, руб</h5>
+            <h5>Бюджет проекта,<label  for="customRange3" class="form-label" id="output"></label> <span id="rub">руб</span></h5>
             <div class="line">
-              <input class="ball one" type="button">
-              <input class="ball two" type="button">
-              <input class="ball three" type="button">
+              <input type="range" class="form-range" min="0" max="200000" step="10000" id="range">
+              <div class="ball one" type="button"></div>
+              <div class="ball two" type="button"></div>
+              <div class="ball three" type="button"></div>
               <div class="text">
                 <p>Я не знаю</p>
                 <p>100 т.</p>
@@ -183,12 +199,99 @@
       </div>
     </section>
     <section class="section-content-five">
-      
+      <div class="section-content-five-content">
+        <div class="popylar-q-text">
+          <h5>Популярные вопросы</h5>
+        </div>
+       <div class="popylar-q">
+        <div class="popylar-q-three">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne-first">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-first" aria-expanded="true" aria-controls="collapseOne-first">
+                  Как проходит работа?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseOne-first" class="accordion-collapse collapse show" aria-labelledby="headingOne-first" >
+              <div class="accordion-body">
+                Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo-first">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo-first" aria-expanded="false" aria-controls="collapseTwo-first">
+                  Как проходит работа?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo-first" class="accordion-collapse collapse" aria-labelledby="headingTwo-first" >
+              <div class="accordion-body">
+                Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree-first">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree-first" aria-expanded="false" aria-controls="collapseThree-first">
+                  Как проходит работа?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree-first" class="accordion-collapse collapse" aria-labelledby="headingThree-first">
+              <div class="accordion-body">
+                Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popylar-q-three-next">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne-next">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-next" aria-expanded="true" aria-controls="collapseOne-next">
+                  Как проходит работа?
+                </button>
+              </h2>
+              </div>
+              <div id="collapseOne-next" class="accordion-collapse collapse show" aria-labelledby="headingOne-next">
+                <div class="accordion-body">
+                  Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.
+                </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo-next">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo-next" aria-expanded="false" aria-controls="collapseTwo-next">
+                  Как проходит работа?
+                </button>
+              </h2>
+              </div>
+              <div id="collapseTwo-next" class="accordion-collapse collapse" aria-labelledby="headingTwo-next" >
+                <div class="accordion-body">
+                  Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.
+                </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree-next">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree-next" aria-expanded="false" aria-controls="collapseThree-next">
+                  Как проходит работа?
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree-next" class="accordion-collapse collapse" aria-labelledby="headingThree-next">
+              <div class="accordion-body">
+                Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
     </section>
     <section class="section-content-six">
-      
     </section>
   </div>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" ></script> 
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/jquery.countimator.js"></script>
   <script src="js/jquery.ripples.js"></script>
