@@ -1038,6 +1038,11 @@ header .navbar .menu-items button {
   padding-left: 43px;
   z-index: 10;
   background: rgba(255, 255, 255, 0.2);
+  font-family: DIN Pro;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
 }
 
 .section-content-five .section-content-five-content .popylar-q .accordion .accordion-item .accordion-header .accordion-button::before {
@@ -1089,5 +1094,272 @@ header .navbar .menu-items button {
   border-radius: 10px;
   margin-bottom: 30px;
   padding: 24px 29px 25px 27px;
+  font-family: DIN Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.section-content-six {
+  position: absolute;
+  top: 400%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;
+  overflow: hidden;
+  color: #FFF;
+  background: url(../img/bg-section-six.png);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-content-six::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(#01040F), color-stop(53.12%, #23326A), to(#01040F)), #022C5E;
+  background: linear-gradient(180deg, #01040F 0%, #23326A 53.12%, #01040F 100%), #022C5E;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.section-content-six .section-content-six-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-content-six .section-content-six-content .contacs-heading {
+  width: 50%;
+  text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.section-content-six .section-content-six-content .contacts-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts .c-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts .c-group .c-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts .c-group .c-item img {
+  padding-bottom: 27px;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts .c-group .c-item p {
+  font-family: DIN Pro;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts .c-group .c-item span {
+  font-family: DIN Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts-form {
+  width: 540px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts-form form {
+  height: 370px;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts-form .form-floating {
+  height: 50px;
+  margin-bottom: 20px !important;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts-form .form-floating::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0F516A), to(#0F516A));
+  background: linear-gradient(0deg, #0F516A, #0F516A);
+  opacity: 0.2;
+  border-radius: 5px;
+  border: none;
+  top: 0;
+  z-index: -1;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts-form .form-floating .input {
+  background: none;
+  border-radius: 5px;
+  border: none;
+  color: #FFF;
+  height: 50px;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts-form .form-floating .input:focus {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts-form .form-floating label {
+  font-family: DIN Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts-form .textarea {
+  height: 150px;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts-form .file {
+  color: #FFF;
+  background: none;
+  border: none;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  height: 25px;
+  margin-bottom: 25px;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts-form .file::after {
+  content: '';
+  display: block;
+  position: relative;
+  bottom: 170%;
+  height: 20px;
+  width: 45%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#01040F), color-stop(53.12%, #23326A), to(#01040F)), #022C5E;
+  background: linear-gradient(180deg, #01040F 0%, #23326A 53.12%, #01040F 100%), #022C5E;
+  opacity: 0.2;
+  border-radius: 5px;
+  border: none;
+  z-index: -1;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts-form .file .load {
+  padding-left: 170px;
+  font-family: DIN Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #85E3FD;
+}
+
+.section-content-six .section-content-six-content .contacts-items .contacts-form button {
+  background: #2F80ED;
+  border-radius: 100px;
+  border: none;
+  height: 50px;
+  -webkit-filter: drop-shadow(0px 2px 15px rgba(68, 117, 226, 0.5));
+          filter: drop-shadow(0px 2px 15px rgba(68, 117, 226, 0.5));
+  color: white;
+  font-family: DIN Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */

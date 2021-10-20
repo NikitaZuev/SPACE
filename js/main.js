@@ -46,8 +46,15 @@ $(document).ready(function() {
         $('.js-fileName').text('Прикрепить файл+');
       }
   });
-
+    $('#form-six').change(function(){
+      var value = $("#form-six").val().split('/').pop().split('\\').pop();
+      $('.js-fileName-six').text(value);
+      if ($("#form-six").val() == ''){
+        $('.js-fileName-six').text('Загрузить файл (если нужно)');
+      }
+  });
 });
+
 
 $(document).ready(function(){
   $('#output').text($('#range').val());  
