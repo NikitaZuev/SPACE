@@ -77,7 +77,7 @@ $(document).ready(function () {
   );     
 });
 $(document).ready(function(){
-  var SectionOrder = document.querySelector('.form-order');
+  var SectionOrder = document.querySelector('.form-order-btn');
   var SectionOrderOpen = document.querySelector('.section-content-four');
   var SectionOrderClose = document.querySelector('.closed-menu')
   SectionOrder.addEventListener('click', function(){
