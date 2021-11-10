@@ -7,6 +7,7 @@
   <title>SPACE</title>
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
   <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="node_modules\swiper\swiper-bundle.min.css"/>
 </head>
 <body>
   <header class="header-area">
@@ -44,10 +45,10 @@
       <div class="description">
         <div class="text_box">
           <h2>
-            <span class="word "></span>
+            <span class="word ">Сайты</span>
             <span class="word ">презентации</span>
-            <span class="word "></span>
-            <span class="word "></span>
+            <span class="word ">3D&ensp;моделирование</span>
+            <span class="word ">графический&ensp;дизайн</span>
           </h2>
         </div>
         <p>Комплексное продвижение и поддержка проектов</p>
@@ -63,7 +64,7 @@
             графический <br> дизайн
           </div> 
           <div class="button-qury bottom">
-            <span class="rt_text" data-hover="Cкролл вниз">
+            <span class="rt_text" data-hover="Подробнее">
 
             </span>
           </div>
@@ -73,7 +74,7 @@
             web дизайн
           </div>
           <div class="button-qury bottom">
-            <span class="rt_text" data-hover="Cкролл вниз">
+            <span class="rt_text" data-hover="Подробнее">
 
             </span>
           </div>
@@ -83,7 +84,7 @@
             3d
           </div>
           <div class="button-qury bottom">
-            <span class="rt_text" data-hover="Cкролл вниз">
+            <span class="rt_text" data-hover="Подробнее">
 
             </span>
           </div>
@@ -93,36 +94,55 @@
     </section>
     <section class="section-content-three">
       <div class="reviews">
-        <div class="reviews-content">
+        <div class="swiper mySwiper">
           <h2>Отзывы</h2>
-          <div class="reviews-items">
-          <div class="text-reviews">
-            <img src="img/quotation-marks.svg">
-            <p>Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.</p>
-          </div>  
-          <div class="author">
-            <img src="img/img-author.png">
-            <p> Майк <br> Дизайн сайта</p>
-          </div>
-          </div>
-          <div class="reviews-items">
-            <div class="text-reviews">
-              <img src="img/quotation-marks.svg">
-              <p>Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.</p>
-            </div>  
-            <div class="author">
-              <img src="img/img-author.png">
-              <p> Майк <br> Дизайн сайта</p>
+          <div class="swiper-wrapper">
+            <div class="reviews-content swiper-slide">
+              <div class="reviews-items ">
+                <div class="text-reviews ">
+                  <img src="img/quotation-marks.svg">
+                  <p>Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.</p>
+                </div>  
+                <div class="author">
+                  <img src="img/img-author.png">
+                  <p> Майк <br> Дизайн сайта</p>
+                </div>
+              </div>
+              <div class="reviews-items">
+                <div class="text-reviews">
+                  <img src="img/quotation-marks.svg">
+                  <p>Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.</p>
+                </div>  
+                <div class="author">
+                  <img src="img/img-author.png">
+                  <p> Майк <br> Дизайн сайта</p>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-content swiper-slide">
+              <div class="reviews-items ">
+                <div class="text-reviews ">
+                  <img src="img/quotation-marks.svg">
+                  <p>Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.</p>
+                </div>  
+                <div class="author">
+                  <img src="img/img-author.png">
+                  <p> Майк <br> Дизайн сайта</p>
+                </div>
+              </div>
+              <div class="reviews-items">
+                <div class="text-reviews">
+                  <img src="img/quotation-marks.svg">
+                  <p>Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.</p>
+                </div>  
+                <div class="author">
+                  <img src="img/img-author.png">
+                  <p> Майк <br> Дизайн сайта</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="dots">
-            <ul>
-              <li><a href="#"></a></li>
-              <li><a href="#"></a></li>
-              <li><a href="#"></a></li>
-              <li><a href="#"></a></li>
-            </ul>
-          </div>
+          <div class="swiper-pagination"></div>
         </div>
         <div class="reviews-planet">
             <div class="text-circle">
@@ -296,28 +316,36 @@
         <div class="contacts-items">
           <div class="contacts">
             <div class="c-group">
-              <div class="c-item first">
-                <img src="../img/phone-icon.svg">
-                <p>Телефон</p>
-                <span>+7 (985) 718-34-71</span>
-              </div>
-              <div class="c-item third"> 
-                <img src="../img/skype-icon.svg">
-                <p>Skype</p>
-                <span>Zluchka41</span>
-              </div>
+              <a href="tel:+7(985)718-34-71">
+                <div class="c-item first">
+                  <img src="../img/phone-icon.svg">
+                  <p>Телефон</p>
+                  <span>+7 (985) 718-34-71</span>
+                </div>
+              </a>
+              <a href="skype:Zluchka41">
+                <div class="c-item third"> 
+                  <img src="../img/skype-icon.svg">
+                  <p>Skype</p>
+                  <span>Zluchka41</span>
+                </div>
+              </a>
             </div>
             <div class="c-group">
-              <div class="c-item second">
-                <img src="../img/e-mail-icon.svg">
-                <p>Email</p>
-                <span>Design_moskva@mail.ru</span>
-              </div>
-              <div class="c-item fourth">
-                <img src="../img/telegram-icon.svg">
-                <p>Telegram</p>
-                <span>ZU_design</span>
-              </div>
+              <a href="mailto:Design_moskva@mail.ru">
+                <div class="c-item second">
+                  <img src="../img/e-mail-icon.svg">
+                  <p>Email</p>
+                  <span>Design_moskva@mail.ru</span>
+                </div>
+              </a>
+              <a href="tg://resolve?domain=ZU_design">
+                <div class="c-item fourth">
+                  <img src="../img/telegram-icon.svg">
+                  <p>Telegram</p>
+                  <span>ZU_design</span>
+                </div>
+              </a>
             </div>
           </div>
           <div class="contacts-form">
@@ -350,6 +378,7 @@
       </div>
     </section>
   </div>
+  <script src="node_modules\swiper\swiper-bundle.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" ></script> 
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/jquery.countimator.js"></script>

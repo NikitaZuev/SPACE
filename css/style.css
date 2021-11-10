@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'DIN Pro';
   src: url(../fonts/DINPro.ttf) format("truetype");
@@ -16,6 +15,9 @@
   .section-content-six-content {
     width: 1110px;
   }
+  .section-content-four-content {
+    width: 1110px;
+  }
 }
 
 a {
@@ -23,9 +25,29 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
 button:focus {
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
+}
+
+.swiper {
+  height: 100% !important;
+  width: 20%;
+}
+
+.swiper-wrapper {
+  height: auto !important;
+}
+
+.swiper-slide img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 header {
@@ -334,6 +356,7 @@ header .navbar .menu-items button {
   line-height: 40px;
   text-transform: uppercase;
   color: #FFFFFF;
+  width: 100%;
 }
 
 .section-content-one .description h2 {
@@ -347,9 +370,64 @@ header .navbar .menu-items button {
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
 }
 
-.section-content-one .down {
+.section-content-one .description .text_box {
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+}
+
+.section-content-one .description .text_box .word {
+  font-family: 'Montserrat', normal;
+  position: absolute;
+  width: auto;
+  opacity: 0;
+  font-weight: bold;
+  font-size: 33px;
+  line-height: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  -webkit-transform: translateZ(15px);
+          transform: translateZ(15px);
+  -webkit-transform-origin: 50% 50% 55px;
+          transform-origin: 50% 50% 55px;
+}
+
+.letter.out {
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: -webkit-transform 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+
+.letter.in {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transition: -webkit-transform 0.44s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 0.44s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.44s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.44s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.44s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.down {
   position: absolute;
   right: 19%;
   bottom: 4%;
@@ -366,7 +444,14 @@ header .navbar .menu-items button {
 }
 
 .rt_text {
-  overflow: hidden;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  display: block;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
 }
 
 .rt_text::before {
@@ -502,6 +587,7 @@ header .navbar .menu-items button {
   line-height: 22px;
   text-align: center;
   text-transform: uppercase;
+  overflow: hidden;
 }
 
 .service__info_link--active {
@@ -594,9 +680,20 @@ header .navbar .menu-items button {
       justify-content: space-around;
 }
 
+.section-content-three .reviews h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 33px;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin-top: 180px;
+  margin-bottom: 100px;
+}
+
 .section-content-three .reviews .reviews-content {
   width: 380px;
-  height: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -606,9 +703,6 @@ header .navbar .menu-items button {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
 }
 
 .section-content-three .reviews .reviews-content .author {
@@ -618,6 +712,8 @@ header .navbar .menu-items button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 45px;
+  margin-bottom: 55px;
 }
 
 .section-content-three .reviews .reviews-content .author img {
@@ -627,45 +723,11 @@ header .navbar .menu-items button {
           filter: drop-shadow(0px 4px 15px rgba(68, 117, 226, 0.15));
 }
 
-.section-content-three .reviews .reviews-content .dots {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.section-content-three .reviews .reviews-content .dots ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: 50%;
-  list-style-type: none;
-}
-
-.section-content-three .reviews .reviews-content .dots ul li::before {
-  content: "\2022";
-  /* юникод точки */
-  color: #FFF;
-  /* Менять цвет */
-  font-weight: bold;
-  /* Менять жирность */
-  display: inline-block;
-  /* Расстояние между точкой и текстом */
-  font-size: 40px;
-  height: 17px;
-  width: 17px;
+.section-content-three .reviews .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  z-index: 10;
 }
 
 .section-content-three .reviews .reviews-planet {
@@ -772,7 +834,6 @@ header .navbar .menu-items button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -785,13 +846,14 @@ header .navbar .menu-items button {
       -ms-flex-align: center;
           align-items: center;
   text-transform: uppercase;
+  margin: auto;
 }
 
 .section-content-four .section-content-four-content .header-choise {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 60%;
+  width: 100%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -829,7 +891,7 @@ header .navbar .menu-items button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 60%;
+  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -844,7 +906,8 @@ header .navbar .menu-items button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 40%;
+  width: 100%;
+  margin-right: 100px;
 }
 
 .section-content-four .section-content-four-content .information .personal-information h5 {
@@ -896,7 +959,7 @@ header .navbar .menu-items button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  width: 100%;
 }
 
 .section-content-four .section-content-four-content .budget h5 {
@@ -909,7 +972,7 @@ header .navbar .menu-items button {
 }
 
 .section-content-four .section-content-four-content .budget .line {
-  margin-bottom: 116px;
+  margin-bottom: 67px;
   position: relative;
 }
 
@@ -979,6 +1042,7 @@ header .navbar .menu-items button {
   font-size: 20px;
   line-height: 25px;
   color: #FFF;
+  cursor: pointer;
 }
 
 .section-content-four .section-content-four-content .budget .accept {
@@ -1460,7 +1524,7 @@ header .navbar .menu-items button {
   color: #FFF;
   background: none;
   border: none;
-  font-family: Open Sans;
+  font-family: DIN Pro;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;

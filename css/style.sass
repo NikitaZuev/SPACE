@@ -11,12 +11,29 @@
     width: 1110px
   .section-content-six-content
     width: 1110px
+  .section-content-four-content
+    width: 1110px
 a
   color: #fff
   text-decoration: none
+  &:hover
+    color: #fff
+    text-decoration: none
 button
   &:focus
     box-shadow: none !important
+
+.swiper 
+  height: 100% !important
+  width: 100%
+.swiper-wrapper
+  height: auto !important
+
+
+.swiper-slide img 
+  display: block;
+  object-fit: cover;
+
 header
   margin: 0
   position: absolute
@@ -224,6 +241,7 @@ header
     line-height: 40px;
     text-transform: uppercase;
     color: #FFFFFF;
+    width: 100%;
     h2
       margin: 0
     p
@@ -233,21 +251,63 @@ header
       font-weight: normal;
       font-size: 18px;
       line-height: 22px;
-  .down
-    position: absolute
-    right: 19%
-    bottom: 4%
-    font-family: DIN Pro
-    font-style: normal
-    font-weight: normal
-    font-size: 18px
-    line-height: 22px
-    text-align: center
-    text-transform: uppercase
-    overflow: hidden
-    flex-shrink: 0
-.rt_text
+      display: inline-block;
+      vertical-align: top;
+      margin: 0;
+    .text_box 
+      height: 40px;
+      top: 50%;
+      margin-top: -20px;
+      .word 
+        font-family: 'Montserrat', normal;
+        position: absolute;
+        width: auto;
+        opacity: 0;
+        font-weight: bold;
+        font-size: 33px;
+        line-height: 40px;
+        font-weight: 600
+        text-transform: uppercase;
+        color: #FFFFFF;
+.letter 
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(15px);
+  transform-origin: 50% 50% 55px;
+
+.letter.out 
+  transform: rotateY(90deg);
+  transition: transform 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+.letter.behind 
+  transform: rotateY(-90deg);
+
+.letter.in 
+  transform: rotateY(0deg);
+  transition: transform 0.44s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+.down
+  position: absolute
+  right: 19%
+  bottom: 4%
+  font-family: DIN Pro
+  font-style: normal
+  font-weight: normal
+  font-size: 18px
+  line-height: 22px
+  text-align: center
+  text-transform: uppercase
   overflow: hidden
+  flex-shrink: 0
+.rt_text
+  flex-shrink: 0;
+  position: relative;
+  display: block;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
   &::before
     content: attr(data-hover);
     display: inline-block;
@@ -327,6 +387,7 @@ header
     line-height: 22px
     text-align: center
     text-transform: uppercase
+    overflow: hidden
   
 .service__info_link--active
   box-shadow: 0px 0px 100px #000000, 0px 0px 100px #000000;
@@ -391,40 +452,35 @@ header
     width: 100%
     align-items: center
     justify-content: space-around;
+    h2
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 33px;
+      line-height: 40px;
+      text-transform: uppercase;
+      margin-top: 180px
+      margin-bottom: 100px
     .reviews-content
       width: 380px;
-      height: 100%;
+      height: auto;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      justify-content: space-evenly;
       .author
         display: flex
         align-items: center
+        margin-top: 45px
+        margin-bottom: 55px
         img
           height: 70px
           width:  70px
           filter: drop-shadow(0px 4px 15px rgba(68, 117, 226, 0.15))
-      .dots
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        ul
-          display: flex
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-evenly
-          width: 50%
-          list-style-type: none
-          li
-            &::before
-              content: "\2022";  /* юникод точки */
-              color: #FFF; /* Менять цвет */
-              font-weight: bold; /* Менять жирность */
-              display: inline-block; /* Расстояние между точкой и текстом */
-              font-size: 40px
-              height: 17px
-              width: 17px
+    .swiper-pagination-bullet
+      width: 15px
+      height: 15px
+      background-color: #fff
+      z-index: 10
     .reviews-planet
       display: flex
       width: 900px;
@@ -485,15 +541,15 @@ header
 
   .section-content-four-content
     display: flex
-    width: 100%
     height: 100%
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-transform: uppercase
+    margin: auto
     .header-choise
       display: flex
-      width: 60%;
+      width: 100%;
       justify-content: flex-start;
       border-bottom: 1px solid
       padding-bottom: 22px
@@ -517,13 +573,14 @@ header
         opacity: 1
     .information
       display: flex
-      width: 60%
+      width: 100%
       justify-content: space-between
       margin-top: 110px
       .personal-information
         display: flex
         flex-direction: column
-        width: 40%
+        width: 100%;
+        margin-right: 100px;
         h5
           padding-bottom: 64px
           font-family: DIN Pro;
@@ -553,7 +610,7 @@ header
     .budget
       display: flex
       flex-direction: column
-      width: 50%
+      width: 100%
       h5
         margin-bottom: 99px
         font-family: DIN Pro;
@@ -562,7 +619,7 @@ header
         font-size: 24px;
         line-height: 30px;
       .line
-        margin-bottom: 116px
+        margin-bottom: 67px
         position: relative
         .form-label
           width: 100%
@@ -612,6 +669,7 @@ header
           font-size: 20px;
           line-height: 25px;
           color: #FFF
+          cursor: pointer;
       .accept
         background: none
         border: none
@@ -917,7 +975,7 @@ header
           color: #FFF
           background: none
           border: none
-          font-family: Open Sans;
+          font-family: DIN Pro;
           font-style: normal;
           font-weight: normal;
           font-size: 18px;
