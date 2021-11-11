@@ -308,13 +308,12 @@ header .navbar .menu-items button {
 }
 
 .section-content-one {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: url(../img/bg-section-one.png);
   background-size: cover;
   background-repeat: no-repeat;
-  top: 0%;
   overflow: hidden;
 }
 
@@ -509,14 +508,12 @@ header .navbar .menu-items button {
 }
 
 .section-content-two {
-  position: absolute;
-  top: 100%;
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: url(../img/bg-section-two.png);
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: -1;
   overflow: hidden;
 }
 
@@ -654,15 +651,13 @@ header .navbar .menu-items button {
 }
 
 .section-content-three {
-  position: absolute;
-  top: 200%;
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: url(../img/bg-section-threee.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  z-index: -1;
   overflow: hidden;
   color: #FFF;
 }
@@ -821,7 +816,6 @@ header .navbar .menu-items button {
   background: url(../img/bg-section-four.png);
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 100;
   overflow: hidden;
   color: #FFF;
   -webkit-transition: all .8s ease;
@@ -1148,14 +1142,12 @@ header .navbar .menu-items button {
 }
 
 .section-content-five {
-  position: absolute;
-  top: 300%;
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  z-index: -1;
   color: #FFF;
   background: -webkit-gradient(linear, left top, left bottom, from(#010003), color-stop(29.17%, #07041E), color-stop(30.73%, #07041E), color-stop(50.52%, #111C4D), color-stop(75.52%, #07041E), to(#010206)), #000001;
   background: linear-gradient(180deg, #010003 0%, #07041E 29.17%, #07041E 30.73%, #111C4D 50.52%, #07041E 75.52%, #010206 100%), #000001;
@@ -1264,6 +1256,8 @@ header .navbar .menu-items button {
   transition: -webkit-transform .5s;
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s;
+  -webkit-transform: rotateZ(0);
+          transform: rotateZ(0);
 }
 
 .section-content-five .section-content-five-content .popylar-q .accordion .accordion-item .accordion-header .accordion-button.collapsed {
@@ -1289,8 +1283,8 @@ header .navbar .menu-items button {
   color: #85E3FD;
   -webkit-transform: rotateZ(360deg);
           transform: rotateZ(360deg);
-  height: auto  !important;
-  width: auto !important;
+  height: auto;
+  width: auto;
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;
   transition: transform .5s;
@@ -1311,14 +1305,12 @@ header .navbar .menu-items button {
 }
 
 .section-content-six {
-  position: absolute;
-  top: 420%;
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  z-index: -1;
   overflow: hidden;
   color: #FFF;
   background: url(../img/bg-section-six.png);

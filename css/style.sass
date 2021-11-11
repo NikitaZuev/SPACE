@@ -25,7 +25,7 @@ button
 
 .swiper 
   height: 100% !important
-  width: 100%
+  width: 20%
 .swiper-wrapper
   height: auto !important
 
@@ -205,13 +205,12 @@ header
   &:hover
     transform: translateX(-20px)
 .section-content-one
-  position: absolute
+  position: relative
   width: 100%
-  height: 100%
+  height: 100vh
   background-image: url(../img/bg-section-one.png)
   background-size: cover
   background-repeat: no-repeat
-  top: 0%
   overflow: hidden
   &::after
     content: ""
@@ -332,14 +331,12 @@ header
   100% 
     transform: translateY(0%)   
 .section-content-two
-  position: absolute
-  top: 100%
+  position: relative
   width: 100%
-  height: 100%
+  height: 100vh
   background: url(../img/bg-section-two.png)
   background-size: cover
   background-repeat: no-repeat
-  z-index: -1
   overflow: hidden
 .service
   display: flex
@@ -435,15 +432,13 @@ header
   z-index: 100
 
 .section-content-three
-  position: absolute
-  top: 200%
+  position: relative
   width: 100%
-  height: 100%
+  height: 100vh
   background: url(../img/bg-section-threee.png)
   background-size: cover
   background-repeat: no-repeat
   background-position: center center
-  z-index: -1
   overflow: hidden
   color: #FFF
   .reviews
@@ -533,7 +528,6 @@ header
   background-size: cover
   background-repeat: no-repeat
   background-position: 
-  z-index: 100
   overflow: hidden
   color: #FFF
   transition: all .8s ease
@@ -744,14 +738,12 @@ header
   transform: rotate(-90deg) translateX(-3px)
 
 .section-content-five
-  position: absolute
-  top: 300%
+  position: relative
   width: 100%
-  height: 100%
+  height: 100vh
   background-size: cover
   background-repeat: no-repeat
   background-position: center center
-  z-index: -1
   color: #FFF
   background: linear-gradient(180deg, #010003 0%, #07041E 29.17%, #07041E 30.73%, #111C4D 50.52%, #07041E 75.52%, #010206 100%), #000001;
   display: flex
@@ -818,6 +810,7 @@ header
                 height: auto  !important
                 width: auto !important
                 transition: transform .5s
+                transform: rotateZ(0)
             .accordion-button.collapsed
               background: rgba(255, 255, 255, 0.2)
               color: #FFF
@@ -835,8 +828,8 @@ header
               &::after
                 color: #85E3FD
                 transform: rotateZ(360deg);
-                height: auto  !important
-                width: auto !important
+                height: auto 
+                width: auto 
                 transition: transform .5s
         .accordion-body
           background: rgba(133, 227, 253,0.2 );
@@ -850,14 +843,12 @@ header
           line-height: 22px;
           margin-right: 25px;
 .section-content-six
-  position: absolute
-  top: 420%
+  position: relative
   width: 100%
-  height: 100%
+  height: 100vh
   background-size: cover
   background-repeat: no-repeat
   background-position: center center
-  z-index: -1
   overflow: hidden
   color: #FFF
   background: url(../img/bg-section-six.png)
