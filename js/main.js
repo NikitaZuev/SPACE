@@ -124,6 +124,10 @@ $(document).ready(function() {
 
 
 $(document).ready(function(){
+  var ballone = document.querySelector(".ball-one");
+  var balltwo = document.querySelector(".ball-two");
+  var ballthree = document.querySelector(".ball-three");
+  var range = document.getElementById('range');
   $('#output').text($('#range').val());  
 	$('#range').mousemove(function() {
     if($('#range').val() == '0'){
@@ -134,7 +138,53 @@ $(document).ready(function(){
       $('#output').text($('#range').val());
       $('#rub').text('Руб');
     }
+    if($('#range').val() == '0'){
+      ballone.style.visibility = "hidden"
+    }
+    else{
+      ballone.style.visibility = "visible"
+    }
+    if($('#range').val() == '100000'){
+      balltwo.style.visibility = "hidden"
+    }
+    else{
+      balltwo.style.visibility = "visible"
+    }
+    if($('#range').val() == '200000'){
+      ballthree.style.visibility = "hidden"
+    }
+    else{
+      ballthree.style.visibility = "visible"
+    }
 	});
+  range.addEventListener('touchmove', function(event){
+    if($('#range').val() == '0'){
+      $('#output').text("Я не знаю");
+      $('#rub').text('');
+    }
+    else{
+      $('#output').text($('#range').val());
+      $('#rub').text('Руб');
+    }
+    if($('#range').val() == '0'){
+      ballone.style.visibility = "hidden"
+    }
+    else{
+      ballone.style.visibility = "visible"
+    }
+    if($('#range').val() == '100000'){
+      balltwo.style.visibility = "hidden"
+    }
+    else{
+      balltwo.style.visibility = "visible"
+    }
+    if($('#range').val() == '200000'){
+      ballthree.style.visibility = "hidden"
+    }
+    else{
+      ballthree.style.visibility = "visible"
+    }
+  });
 })
 $(document).ready(function () {
   $('.header-choise-btn').click(           

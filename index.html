@@ -11,13 +11,13 @@
 </head>
 <body>
   <header class="header-area">
-    <nav class="navbar">
+    <nav class="navbar" id="nav">
         <div class="logo">
           <a href="#"><img src="../img/Logo.svg"></a>
         </div>
         <div class="menu-items">
-          <button class="form-order-btn" data-hover="Заказать проект"></button>
-          <button class="lang" data-hover="EN"></button>
+          <button class="form-order-btn" data-hover="Заказать проект" id="form-order-btn"></button>
+          <button class="lang" data-hover="EN" id="lang"></button>
           <div class="wrapper-menu">
             <div class="line-menu  start"></div>
             <div class="line-menu"></div>
@@ -27,11 +27,11 @@
         <div class="menu__box">
           <div class="menu__box_item">
             <ul>
-              <li><a class="menu__item" href="#">Главная</a></li>
-              <li><a class="menu__item" href="#">Проекты</a></li>
-              <li><a class="menu__item" href="#">Команда</a></li>
-              <li><a class="menu__item" href="#">Блог</a></li>
-              <li><a class="menu__item" href="#">Контакты</a></li>
+              <li><a class="menu__item" href="#" id="menu-item">Главная</a></li>
+              <li><a class="menu__item" href="#" id="menu-item">Проекты</a></li>
+              <li><a class="menu__item" href="#" id="menu-item">Команда</a></li>
+              <li><a class="menu__item" href="#" id="menu-item">Блог</a></li>
+              <li><a class="menu__item" href="#" id="menu-item">Контакты</a></li>
             </ul>
           </div>
         </div>
@@ -44,26 +44,26 @@
       <div class="description">
         <div class="text_box">
           <h2>
-            <span class="word ">Сайты</span>
-            <span class="word ">презентации</span>
-            <span class="word ">3D&ensp;моделирование</span>
-            <span class="word ">графический&ensp;дизайн</span>
+            <span class="word " id="word">Сайты</span>
+            <span class="word " id="word">презентации</span>
+            <span class="word " id="word">3D&ensp;моделирование</span>
+            <span class="word " id="word">графический&ensp;дизайн</span>
           </h2>
         </div>
-        <p>Комплексное продвижение и поддержка проектов</p>
+        <p id="text_box_text">Комплексное продвижение и поддержка проектов</p>
       </div>
       <div class="down">
         <a data-index="2" href="#2" class="button-qury scoll"><span class="rt_text" data-hover="Cкролл вниз"></span></a>
       </div>
     </section>
-    <section class="section-content-two">
+    <section class="section-content-two" id="2">
       <div class="service">
         <a href="#" class="service__info">
           <div class="service__info_body">
             графический <br> дизайн
           </div> 
           <div class="button-qury bottom">
-            <span class="rt_text" data-hover="Подробнее">
+            <span class="rt_text" id="rt_text_one" data-hover="Подробнее">
 
             </span>
           </div>
@@ -83,7 +83,7 @@
             3d
           </div>
           <div class="button-qury bottom">
-            <span class="rt_text" data-hover="Подробнее">
+            <span class="rt_text" id="rt_text_three" data-hover="Подробнее">
 
             </span>
           </div>
@@ -163,17 +163,17 @@
       </div>
     </section>
     <section class="section-content-four">
-      <div class="section-content-four-content">
-        <div class="header-choise">
-          <button class="header-choise-btn one">Графический дизайн</button>
+      <div class="section-content-four-content" id="section-content-four-content">
+        <div class="header-choise" id="header-choise">
+          <button class="header-choise-btn one header-choise-btn--active">Графический дизайн</button>
           <button class="header-choise-btn two">Web дизайн</button>
           <button class="header-choise-btn three">3d</button>
           <div class="closed-menu open">
             <div class="line-menu-closed  start"></div>
-            <div class="line-menu-closed"></div>
+            <div class="line-menu-closed end"></div>
           </div>
         </div>
-        <div class="information">
+        <div class="information" id="information">
           <div class="personal-information">
             <h5>Данные</h5>
             <form class="data">
@@ -195,13 +195,13 @@
               </div>
             </form>
           </div>
-          <div class="budget">
+          <div class="budget" id="budget">
             <h5>Бюджет проекта,<label  for="customRange3" class="form-label" id="output"></label> <span id="rub">руб</span></h5>
             <div class="line">
               <input type="range" class="form-range" min="0" max="200000" step="10000" id="range">
-              <div class="ball one" type="button"></div>
-              <div class="ball two" type="button"></div>
-              <div class="ball three" type="button"></div>
+              <div class="balls ball-one" type="button"></div>
+              <div class="balls ball-two" type="button"></div>
+              <div class="balls ball-three" type="button"></div>
               <div class="text">
                 <p>Я не знаю</p>
                 <p>100 т.</p>
@@ -222,7 +222,7 @@
         <div class="popylar-q-text">
           <h5>Популярные вопросы</h5>
         </div>
-       <div class="popylar-q">
+       <div class="popylar-q" id="popylar-q">
         <div class="popylar-q-three">
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
@@ -313,7 +313,7 @@
           <p>Контакты</p>
         </div>
         <div class="contacts-items">
-          <div class="contacts">
+          <div class="contacts" id="contacts">
             <div class="c-group">
               <a href="tel:+7(985)718-34-71">
                 <div class="c-item first">
@@ -347,7 +347,7 @@
               </a>
             </div>
           </div>
-          <div class="contacts-form">
+          <div class="contacts-form" id="contacts-form">
             <form class="data">
               <div class="form-floating mb-3">
                 <input type="name" class="form-control input" id="floatingInput" placeholder="name@example.com">
@@ -363,7 +363,7 @@
               </div>
               <div class="form-floating textarea">
                 <textarea class="form-control input" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px"></textarea>
-                <label class="label-form" for="floatingTextarea2">Какая услуга Вам необходима, пожалуйста опишите</label>
+                <label class="label-form" for="floatingTextarea2">Какая услуга вам необходима, пожалуйста опишите</label>
               </div>
             </form>
             <label class="form-control file"> 

@@ -13,6 +13,170 @@
     width: 1110px
   .section-content-four-content
     width: 1110px
+@media screen and (max-width: 768px)
+  #nav
+    margin-left: 0
+    margin-right: 0
+  div.menu__box
+    display: none
+    width: 100%
+  div.menu__box.open
+    display: block
+  .big-logo img
+    height: 100%;
+    width: 100%;
+  section.section-content-one .description
+    top: 80%
+  #word
+    font-size: 25px;
+  #text_box_text
+    font-size: 15px;
+  #menu-item
+    padding: 25px 0
+    text-align: center
+  div.down
+    right: 15%
+  .service
+    flex-direction: column;
+    flex-wrap: wrap
+  a.service__info
+    height: 33.33333vh;
+  div.plank__box 
+    width: 100%
+    height: 33.3333%
+    &::before
+      top: auto
+      left: 0;
+      bottom: 100%;
+      height: 200%
+      width: 100%;
+    &::after
+      height: 200%
+      left: 0;
+      top: 100%;
+      width: 100%;
+      background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.38) 100%);
+  a.service__info_link--active:first-child~.plank__box
+    transform: translate3d(0,0,0);
+
+  a.service__info_link--active:nth-child(2)~.plank__box
+    transform:  translate3d(0,100%,0);
+    
+  a.service__info_link--active:nth-child(3)~.plank__box
+    transform: translate3d(0,200%,0);
+  #rt_text_one
+    &::before
+      content: ''
+    &::after
+      content: ''
+  #rt_text_three
+    &::before
+      content: ''
+    &::after
+      content: ''
+  section.section-content-six
+    height: 100%
+    min-height: 100vh
+    .contacs-heading
+      margin-top: 25px
+      p
+        text-align: center
+    .contacts-items
+      
+      #contacts
+        width: 100%
+        .c-item
+          margin-bottom: 25px
+          p
+            font-size: 18px
+          span
+            font-size: 15px
+      #contacts-form
+        width: 100%
+        .js-fileName-six
+          font-size: 15px
+        .load
+          font-size: 15px
+          padding-left: 0
+        .label-form
+          font-size: 12px
+@media screen and (max-width: 500px)
+  #form-order-btn 
+    transform: none
+    &::after
+      content: ''
+      transform: none
+  #lang
+    transform: none
+    margin: auto
+    &::after
+      content: ''
+  #nav
+    margin-left: 0
+    margin-right: 0
+    justify-content: center;
+    flex-direction: column;
+  div.menu-items
+    flex-direction: column
+  #word
+    font-size: 20px;
+  #text_box_text
+    font-size: 10px;
+  div.down
+    right: 30%
+  section.section-content-one
+    &::after
+      right: 47%
+  #section-content-four-content
+    min-height: 100vh
+    height: auto
+  #header-choise
+    overflow: auto;
+    font-size: 20px;
+    padding-bottom: 0
+    align-items: center;
+    .header-choise-btn
+      padding-right: 100px
+    .closed-menu
+      right: auto;
+      top: auto;
+      .line-menu-closed
+        width: 40px
+  #information
+    flex-wrap: wrap
+    justify-content: space-between;
+    margin-top: 30px;
+    .personal-information
+      align-items: center;
+      margin-right: 0
+      h5
+        padding-bottom: 15px; 
+        font-size: 18px
+  #budget
+    h5
+      font-size: 18px;
+      margin-bottom: 23px;
+      margin-top: 20px;
+      text-align: center
+    .line
+      margin-bottom: 20px;
+    .form-control
+        margin-bottom: 45px;
+        text-align: center;
+        .js-fileName
+          font-size: 18px;
+    .accept
+      font-size: 23px;
+      text-align: center
+    .form-range
+      &::-webkit-slider-thumb
+  #popylar-q
+    flex-wrap: wrap
+
+
+
+  
+
 a
   color: #fff
   text-decoration: none
@@ -37,7 +201,7 @@ button
 header
   margin: 0
   position: absolute
-  z-index: 9
+  z-index: 1
   width: 100%;
   .navbar
     display: flex
@@ -165,14 +329,8 @@ header
   width: 100%
   height: 3px
 
-
 .line-menu.half 
   width: 50%
-
-
-.line-menu.start 
-
-
 
 .wrapper-menu:hover .start 
   transition: transform 300ms ease-out
@@ -230,9 +388,9 @@ header
     position: absolute;
     top: 473px;
   .description
-    position: absolute
-    left: 207px;
-    top: 833px;
+    position: relative
+    left: 10%
+    top: 90%
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
@@ -385,9 +543,9 @@ header
     text-align: center
     text-transform: uppercase
     overflow: hidden
-  
+
 .service__info_link--active
-  box-shadow: 0px 0px 100px #000000, 0px 0px 100px #000000;
+
   background: none
   transition: all 2s ease-out
 
@@ -408,7 +566,7 @@ header
   right: 0;
   width: 33.3333%;
   margin: 0 auto;
-
+  box-shadow: 0px 0px 100px #000000, 0px 0px 100px #000000;
   transition: .5s ease-out;
   &::before
     content: ''
@@ -434,13 +592,14 @@ header
 .section-content-three
   position: relative
   width: 100%
-  height: 100vh
+  height: 100%
   background: url(../img/bg-section-threee.png)
   background-size: cover
   background-repeat: no-repeat
   background-position: center center
   overflow: hidden
   color: #FFF
+  min-height: 100vh
   .reviews
     display: flex
     height: 100%
@@ -532,7 +691,7 @@ header
   color: #FFF
   transition: all .8s ease
   transform: scale(0)
-
+  z-index: 2
   .section-content-four-content
     display: flex
     height: 100%
@@ -630,7 +789,7 @@ header
             height: 1px
             background: rgba(255, 255, 255, 0.5)
             align-self: center
-        .ball
+        .balls
           background: radial-gradient(87.48% 87.44% at 74.14% 28.44%, #FFFFFF 0%, #FBFCFE 7.05%, #EEF2F9 14.31%, #DAE2F2 21.68%, #BDCCE9 29.12%, #98AFDC 36.6%, #6B8CCD 44.03%, #3D68BD 50.54%, #3C67BB 50.87%, #234179 61.54%, #102649 70.51%, #04152C 77.34%, #000F21 81.22%, #0D1F35 84.36%, #2F4769 90.79%, #6488BB 99.88%, #6589BC 100%);
           width: 17px
           height: 17px
@@ -639,10 +798,10 @@ header
           top: 5%
           border: none
           z-index: 10
-        .two
+        .ball-two
           position: absolute
           left: 49%
-        .three
+        .ball-three
           position: absolute
           left: 97%
       .text
@@ -683,7 +842,8 @@ header
     bottom: 0;
     transform: scale(1)
     transition: all .8s ease
-
+    height: 100%
+    min-height: 100vh
 .closed-menu 
   width: 37px
   height: 17px
@@ -711,36 +871,22 @@ header
   width: 50%
 
 
-.line-menu-closed.start 
-
-
-
-.closed-menu:hover.start 
-  transition: transform 300ms ease-out
-
-.closed-menu:hover.end 
-  -webkit-transform: translateX(-19px)
-  transform: translateX(-19px)
-  transition: transform 300ms ease-out
-
+.closed-menu.open:hover .start 
+  transform: rotate(270deg) translateX(-14px)
+  transition: all 1s 
 
 .open .line-menu-closed.start 
   transform: rotate(90deg) translateX(14px)
 
+.closed-menu.open:hover .end 
+  transform: rotate(-180deg) translateX(0px)
+  transition: all 1s 
 
-.line-menu-closed.end 
-  align-self: flex-end
-  transition: transform 230ms cubic-bezier(0.54, -0.81, 0.57, 0.57)
-  transform-origin: left
-
-
-.open .line-menu-closed.end 
-  transform: rotate(-90deg) translateX(-3px)
 
 .section-content-five
   position: relative
   width: 100%
-  height: 100vh
+  height: 100%
   background-size: cover
   background-repeat: no-repeat
   background-position: center center
@@ -750,7 +896,8 @@ header
   align-items: center;
   justify-content: center;
   overflow: hidden
-  min-height: 120%
+  min-height: 100vh
+  padding: 25px 0
   .section-content-five-content
     display: flex
     flex-direction: column;
@@ -771,12 +918,11 @@ header
       width: 100%;
       justify-content: space-evenly;
       .popylar-q-three
-        width: 50%
+        width: 100%
       .accordion
         .accordion-item
           border-radius: 10px
           border: none
-          margin-right: 25px;
           margin-bottom: 30px;
           background: none
           .accordion-header
@@ -804,13 +950,16 @@ header
                 transition: all .5s
                 z-index: -1
               &::after
-                content: '+'
+                content: ''
                 background-image: none
                 transform: none
-                height: auto  !important
-                width: auto !important
+                height: 27px
+                width: 12px
                 transition: transform .5s
                 transform: rotateZ(0)
+                background: url('../img/plus.png')
+                background-repeat: no-repeat;
+                background-position: center;
             .accordion-button.collapsed
               background: rgba(255, 255, 255, 0.2)
               color: #FFF
@@ -828,9 +977,12 @@ header
               &::after
                 color: #85E3FD
                 transform: rotateZ(360deg);
-                height: auto 
-                width: auto 
+                height: 27px
+                width: 12px
                 transition: transform .5s
+                background: url('../img/plus.png')
+                background-repeat: no-repeat;
+                background-position: center;
         .accordion-body
           background: rgba(133, 227, 253,0.2 );
           border-radius: 10px
@@ -841,12 +993,11 @@ header
           font-weight: normal;
           font-size: 18px;
           line-height: 22px;
-          margin-right: 25px;
 .section-content-six
   position: relative
   width: 100%
   height: 100vh
-  background-size: cover
+  background-size: cover !important
   background-repeat: no-repeat
   background-position: center center
   overflow: hidden
@@ -867,7 +1018,6 @@ header
     left: 0 
     mix-blend-mode: normal;
     opacity: 0.6;
-    z-index: 1
   .section-content-six-content
     display: flex
     z-index: 10
@@ -898,7 +1048,6 @@ header
         height: 100%
         align-items: center;
         justify-content: space-around;
-        flex-wrap: wrap
         .c-group
           display: flex
           flex-direction: column
