@@ -5,6 +5,8 @@
 @font-face 
 	font-family: 'Montserrat'; 
 	src: url(../fonts/Montserrat-SemiBold.ttf) format('truetype')
+::-webkit-scrollbar 
+  width: 0;
 
 @media screen and (min-width: 1110px)
   .section-content-five-content
@@ -26,7 +28,6 @@
     height: 100%;
     width: 100%;
   section.section-content-one .description
-    top: 80%
   #word
     font-size: 25px;
   #text_box_text
@@ -34,6 +35,7 @@
   #menu-item
     padding: 25px 0
     text-align: center
+    display: block
   div.down
     right: 15%
   .service
@@ -74,6 +76,27 @@
       content: ''
     &::after
       content: ''
+  section.section-content-three
+    .swiper
+      width: 100%
+      margin: 10px
+      order: 2
+      h2
+        text-align: center
+        margin: 50px
+    .reviews-planet
+      margin: 20px
+      .planet-content
+        .circle
+          width: 600px
+          height: 600px
+          .stripe-svg
+            left: 18%
+            transform: rotate(0.05rad)
+        .planet
+          img
+            height: 540px
+            width: 540px
   section.section-content-six
     height: 100%
     min-height: 100vh
@@ -93,13 +116,16 @@
             font-size: 15px
       #contacts-form
         width: 100%
+        margin: 0 10px;
         .js-fileName-six
-          font-size: 15px
+          font-size: 14px
         .load
-          font-size: 15px
+          font-size: 14px
           padding-left: 0
         .label-form
           font-size: 12px
+        button
+          margin-bottom: 10px
 @media screen and (max-width: 500px)
   #form-order-btn 
     transform: none
@@ -107,15 +133,14 @@
       content: ''
       transform: none
   #lang
-    transform: none
-    margin: auto
-    &::after
-      content: ''
+    display: none
   #nav
     margin-left: 0
     margin-right: 0
     justify-content: center;
     flex-direction: column;
+  div.wrapper-menu
+    left: 85%
   div.menu-items
     flex-direction: column
   #word
@@ -127,6 +152,45 @@
   section.section-content-one
     &::after
       right: 47%
+  section.section-content-three
+    .swiper
+      width: 100%
+      margin: 10px
+      order: 2
+      h2
+        text-align: center
+        margin: 50px
+    .reviews-planet
+      margin: 30px
+      margin-left: 300px
+      #text-circle
+        z-index: 10
+        p.one
+          left: 100%
+          top: -5%
+        p.two
+          left: 10%
+          top: 0%
+        p.three
+          left: -20%
+          top: 5%
+        p.four
+          left: 40%
+          top: 10%
+        p.five
+          left: 150%
+          top: 15%
+      .planet-content
+        .circle
+          width: 450px
+          height: 450px
+          .stripe-svg
+            left: 12%
+            transform: rotate(0.01rad)
+        .planet
+          img
+            height: 390px
+            width: 390px
   #section-content-four-content
     min-height: 100vh
     height: auto
@@ -137,9 +201,14 @@
     align-items: center;
     .header-choise-btn
       padding-right: 100px
+      padding-bottom: 22px
+      margin: 0
+    .one
+      padding-left: 10px
     .closed-menu
       right: auto;
       top: auto;
+      margin-top: 22px
       .line-menu-closed
         width: 40px
   #information
@@ -152,6 +221,8 @@
       h5
         padding-bottom: 15px; 
         font-size: 18px
+      .data 
+        width: 100%
   #budget
     h5
       font-size: 18px;
@@ -174,9 +245,15 @@
     flex-wrap: wrap
 
 
+html body 
+  height: 100%;
+  overflow: hidden;
+
+ 
 
   
-
+.fullpage
+  height: 100%
 a
   color: #fff
   text-decoration: none
@@ -188,7 +265,7 @@ button
     box-shadow: none !important
 
 .swiper 
-  height: 100% !important
+  height: 100% 
   width: 20%
 .swiper-wrapper
   height: auto !important
@@ -201,7 +278,7 @@ button
 header
   margin: 0
   position: absolute
-  z-index: 1
+  z-index: 1000
   width: 100%;
   .navbar
     display: flex
@@ -307,6 +384,8 @@ header
       text-align: right
       text-decoration: none
       color: #FFF
+    .langen
+      display: none
 .wrapper-menu 
   width: 37px
   height: 17px
@@ -358,7 +437,7 @@ header
   visibility: visible
   right: 0
   transform: matrix(1, 0, 0, 1.03528, 0, 0)
-
+  z-index: 100
 .menu__item
   &:hover
     transform: translateX(-20px)
@@ -386,11 +465,11 @@ header
     display: flex 
     justify-content: center;
     position: absolute;
-    top: 473px;
+    top: 50%
   .description
-    position: relative
+    position: absolute
     left: 10%
-    top: 90%
+    bottom: 10%
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
@@ -606,6 +685,7 @@ header
     width: 100%
     align-items: center
     justify-content: space-around;
+    flex-wrap: wrap
     h2
       font-family: Montserrat;
       font-style: normal;
@@ -616,7 +696,6 @@ header
       margin-top: 180px
       margin-bottom: 100px
     .reviews-content
-      width: 380px;
       height: auto;
       display: flex;
       flex-direction: column;
@@ -676,22 +755,18 @@ header
   transform: rotate(0.1rad)
 
 .section-content-four
-  display: block
-  position: absolute
-  visibility: hidden
-  top: 0
-  right: 0
-  left: 0;
-  bottom: 0;
   background: url(../img/bg-section-four.png)
   background-size: cover
   background-repeat: no-repeat
   background-position: 
-  overflow: hidden
   color: #FFF
-  transition: all .8s ease
-  transform: scale(0)
-  z-index: 2
+  div.modal-dialog
+    max-width: 1110px
+  div.modal-content
+    background: none 
+    border: none
+  div.modal-header
+    padding: 0
   .section-content-four-content
     display: flex
     height: 100%
@@ -712,11 +787,12 @@ header
       font-size: 28px;
       line-height: 34px;
       button
-        padding-right: 70px
+        margin: auto auto 0  0
         opacity: 0.5
         color: #FFF
         background: none
         border: none
+        padding: 0
         &:hover
           color: #FFF
         &:active
@@ -834,16 +910,6 @@ header
         line-height: 40px;
         text-transform: uppercase;
         color: #FFF
-.section-content-four.open
-    visibility: visible
-    top: 0
-    right: 0
-    left: 0;
-    bottom: 0;
-    transform: scale(1)
-    transition: all .8s ease
-    height: 100%
-    min-height: 100vh
 .closed-menu 
   width: 37px
   height: 17px
@@ -853,9 +919,7 @@ header
   cursor: pointer
   transition: transform 500ms ease-out
   z-index: 999999
-  position: relative;
-  right: -29%;
-  top: 40%;
+  margin: auto 0 auto auto
 
 .closed-menu.open 
   transform: rotate(-45deg)
@@ -892,18 +956,17 @@ header
   background-position: center center
   color: #FFF
   background: linear-gradient(180deg, #010003 0%, #07041E 29.17%, #07041E 30.73%, #111C4D 50.52%, #07041E 75.52%, #010206 100%), #000001;
-  display: flex
-  align-items: center;
-  justify-content: center;
   overflow: hidden
   min-height: 100vh
-  padding: 25px 0
+  margin: auto
   .section-content-five-content
     display: flex
     flex-direction: column;
     align-items: center;
     justify-content: center
     height: 100%
+    margin: auto
+    padding: 25px 0
     .popylar-q-text
       display: flex
       font-family: Montserrat;
@@ -917,8 +980,10 @@ header
       display: flex
       width: 100%;
       justify-content: space-evenly;
+      margin: 0 -15px
       .popylar-q-three
         width: 100%
+        padding: 0 15px
       .accordion
         .accordion-item
           border-radius: 10px

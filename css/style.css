@@ -8,6 +8,10 @@
   src: url(../fonts/Montserrat-SemiBold.ttf) format("truetype");
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 @media screen and (min-width: 1110px) {
   .section-content-five-content {
     width: 1110px;
@@ -36,9 +40,6 @@
     height: 100%;
     width: 100%;
   }
-  section.section-content-one .description {
-    top: 80%;
-  }
   #word {
     font-size: 25px;
   }
@@ -48,6 +49,7 @@
   #menu-item {
     padding: 25px 0;
     text-align: center;
+    display: block;
   }
   div.down {
     right: 15%;
@@ -106,6 +108,33 @@
   #rt_text_three::after {
     content: '';
   }
+  section.section-content-three .swiper {
+    width: 100%;
+    margin: 10px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  section.section-content-three .swiper h2 {
+    text-align: center;
+    margin: 50px;
+  }
+  section.section-content-three .reviews-planet {
+    margin: 20px;
+  }
+  section.section-content-three .reviews-planet .planet-content .circle {
+    width: 600px;
+    height: 600px;
+  }
+  section.section-content-three .reviews-planet .planet-content .circle .stripe-svg {
+    left: 18%;
+    -webkit-transform: rotate(0.05rad);
+            transform: rotate(0.05rad);
+  }
+  section.section-content-three .reviews-planet .planet-content .planet img {
+    height: 540px;
+    width: 540px;
+  }
   section.section-content-six {
     height: 100%;
     min-height: 100vh;
@@ -130,16 +159,20 @@
   }
   section.section-content-six .contacts-items #contacts-form {
     width: 100%;
+    margin: 0 10px;
   }
   section.section-content-six .contacts-items #contacts-form .js-fileName-six {
-    font-size: 15px;
+    font-size: 14px;
   }
   section.section-content-six .contacts-items #contacts-form .load {
-    font-size: 15px;
+    font-size: 14px;
     padding-left: 0;
   }
   section.section-content-six .contacts-items #contacts-form .label-form {
     font-size: 12px;
+  }
+  section.section-content-six .contacts-items #contacts-form button {
+    margin-bottom: 10px;
   }
 }
 
@@ -154,12 +187,7 @@
             transform: none;
   }
   #lang {
-    -webkit-transform: none;
-            transform: none;
-    margin: auto;
-  }
-  #lang::after {
-    content: '';
+    display: none;
   }
   #nav {
     margin-left: 0;
@@ -171,6 +199,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  div.wrapper-menu {
+    left: 85%;
   }
   div.menu-items {
     -webkit-box-orient: vertical;
@@ -190,6 +221,57 @@
   section.section-content-one::after {
     right: 47%;
   }
+  section.section-content-three .swiper {
+    width: 100%;
+    margin: 10px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  section.section-content-three .swiper h2 {
+    text-align: center;
+    margin: 50px;
+  }
+  section.section-content-three .reviews-planet {
+    margin: 30px;
+    margin-left: 300px;
+  }
+  section.section-content-three .reviews-planet #text-circle {
+    z-index: 10;
+  }
+  section.section-content-three .reviews-planet #text-circle p.one {
+    left: 100%;
+    top: -5%;
+  }
+  section.section-content-three .reviews-planet #text-circle p.two {
+    left: 10%;
+    top: 0%;
+  }
+  section.section-content-three .reviews-planet #text-circle p.three {
+    left: -20%;
+    top: 5%;
+  }
+  section.section-content-three .reviews-planet #text-circle p.four {
+    left: 40%;
+    top: 10%;
+  }
+  section.section-content-three .reviews-planet #text-circle p.five {
+    left: 150%;
+    top: 15%;
+  }
+  section.section-content-three .reviews-planet .planet-content .circle {
+    width: 450px;
+    height: 450px;
+  }
+  section.section-content-three .reviews-planet .planet-content .circle .stripe-svg {
+    left: 12%;
+    -webkit-transform: rotate(0.01rad);
+            transform: rotate(0.01rad);
+  }
+  section.section-content-three .reviews-planet .planet-content .planet img {
+    height: 390px;
+    width: 390px;
+  }
   #section-content-four-content {
     min-height: 100vh;
     height: auto;
@@ -204,10 +286,16 @@
   }
   #header-choise .header-choise-btn {
     padding-right: 100px;
+    padding-bottom: 22px;
+    margin: 0;
+  }
+  #header-choise .one {
+    padding-left: 10px;
   }
   #header-choise .closed-menu {
     right: auto;
     top: auto;
+    margin-top: 22px;
   }
   #header-choise .closed-menu .line-menu-closed {
     width: 40px;
@@ -229,6 +317,9 @@
   #information .personal-information h5 {
     padding-bottom: 15px;
     font-size: 18px;
+  }
+  #information .personal-information .data {
+    width: 100%;
   }
   #budget h5 {
     font-size: 18px;
@@ -256,6 +347,15 @@
   }
 }
 
+html body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.fullpage {
+  height: 100%;
+}
+
 a {
   color: #fff;
   text-decoration: none;
@@ -272,7 +372,7 @@ button:focus {
 }
 
 .swiper {
-  height: 100% !important;
+  height: 100%;
   width: 20%;
 }
 
@@ -289,7 +389,7 @@ button:focus {
 header {
   margin: 0;
   position: absolute;
-  z-index: 1;
+  z-index: 1000;
   width: 100%;
 }
 
@@ -454,6 +554,10 @@ header .navbar .menu-items button {
   color: #FFF;
 }
 
+.menu__box ul .langen {
+  display: none;
+}
+
 .wrapper-menu {
   width: 37px;
   height: 17px;
@@ -536,6 +640,7 @@ header .navbar .menu-items button {
   right: 0;
   -webkit-transform: matrix(1, 0, 0, 1.03528, 0, 0);
           transform: matrix(1, 0, 0, 1.03528, 0, 0);
+  z-index: 100;
 }
 
 .menu__item:hover {
@@ -577,13 +682,13 @@ header .navbar .menu-items button {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  top: 473px;
+  top: 50%;
 }
 
 .section-content-one .description {
-  position: relative;
+  position: absolute;
   left: 10%;
-  top: 90%;
+  bottom: 10%;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
@@ -910,6 +1015,8 @@ header .navbar .menu-items button {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .section-content-three .reviews h2 {
@@ -924,7 +1031,6 @@ header .navbar .menu-items button {
 }
 
 .section-content-three .reviews .reviews-content {
-  width: 380px;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1043,23 +1149,23 @@ header .navbar .menu-items button {
 }
 
 .section-content-four {
-  display: block;
-  position: absolute;
-  visibility: hidden;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
   background: url(../img/bg-section-four.png);
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
   color: #FFF;
-  -webkit-transition: all .8s ease;
-  transition: all .8s ease;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  z-index: 2;
+}
+
+.section-content-four div.modal-dialog {
+  max-width: 1110px;
+}
+
+.section-content-four div.modal-content {
+  background: none;
+  border: none;
+}
+
+.section-content-four div.modal-header {
+  padding: 0;
 }
 
 .section-content-four .section-content-four-content {
@@ -1099,11 +1205,12 @@ header .navbar .menu-items button {
 }
 
 .section-content-four .section-content-four-content .header-choise button {
-  padding-right: 70px;
+  margin: auto auto 0  0;
   opacity: 0.5;
   color: #FFF;
   background: none;
   border: none;
+  padding: 0;
 }
 
 .section-content-four .section-content-four-content .header-choise button:hover {
@@ -1290,20 +1397,6 @@ header .navbar .menu-items button {
   color: #FFF;
 }
 
-.section-content-four.open {
-  visibility: visible;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all .8s ease;
-  transition: all .8s ease;
-  height: 100%;
-  min-height: 100vh;
-}
-
 .closed-menu {
   width: 37px;
   height: 17px;
@@ -1323,9 +1416,7 @@ header .navbar .menu-items button {
   transition: transform 500ms ease-out;
   transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
   z-index: 999999;
-  position: relative;
-  right: -29%;
-  top: 40%;
+  margin: auto 0 auto auto;
 }
 
 .closed-menu.open {
@@ -1373,18 +1464,9 @@ header .navbar .menu-items button {
   color: #FFF;
   background: -webkit-gradient(linear, left top, left bottom, from(#010003), color-stop(29.17%, #07041E), color-stop(30.73%, #07041E), color-stop(50.52%, #111C4D), color-stop(75.52%, #07041E), to(#010206)), #000001;
   background: linear-gradient(180deg, #010003 0%, #07041E 29.17%, #07041E 30.73%, #111C4D 50.52%, #07041E 75.52%, #010206 100%), #000001;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   overflow: hidden;
   min-height: 100vh;
-  padding: 25px 0;
+  margin: auto;
 }
 
 .section-content-five .section-content-five-content {
@@ -1402,6 +1484,8 @@ header .navbar .menu-items button {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+  margin: auto;
+  padding: 25px 0;
 }
 
 .section-content-five .section-content-five-content .popylar-q-text {
@@ -1425,10 +1509,12 @@ header .navbar .menu-items button {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin: 0 -15px;
 }
 
 .section-content-five .section-content-five-content .popylar-q .popylar-q-three {
   width: 100%;
+  padding: 0 15px;
 }
 
 .section-content-five .section-content-five-content .popylar-q .accordion .accordion-item {

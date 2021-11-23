@@ -185,24 +185,11 @@ $(document).ready(function(){
       ballthree.style.visibility = "visible"
     }
   });
-})
+});
 $(document).ready(function () {
   $('.header-choise-btn').click(           
     function(){ //при наведении на любую ссылку указанного class'a  
          $('.header-choise-btn').removeClass('header-choise-btn--active'); // у всех удаляем class
          $(this).addClass('header-choise-btn--active') } // а этой ссылке добавляем
   );     
-});
-$(document).ready(function(){
-  var SectionOrder = document.querySelector('.form-order-btn');
-  var SectionOrderOpen = document.querySelector('.section-content-four');
-  var SectionOrderClose = document.querySelector('.closed-menu')
-  SectionOrder.addEventListener('click', function(){
-    SectionOrder.classList.toggle('open');  
-    SectionOrderOpen.classList.toggle('open');  
-  });
-  SectionOrderClose.addEventListener('click', function(){
-    SectionOrder.classList.toggle('open');  
-    SectionOrderOpen.classList.toggle('open');  
-  });
 });
