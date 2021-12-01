@@ -12,7 +12,7 @@
   width: 0;
 }
 
-@media screen and (min-width: 1110px) {
+@media screen and (min-width: 1200px) {
   .section-content-five-content {
     width: 1110px;
   }
@@ -22,19 +22,38 @@
   .section-content-four-content {
     width: 1110px;
   }
+  html body {
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+  #popylar-q {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section-content-six-content {
+    width: 100%;
+  }
+  section.section-content-three .swiper {
+    width: 70%;
+  }
   #nav {
     margin-left: 0;
     margin-right: 0;
   }
+}
+
+@media screen and (max-width: 768px) {
   div.menu__box {
-    display: none;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
     width: 100%;
   }
   div.menu__box.open {
-    display: block;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   .big-logo img {
     height: 100%;
@@ -162,10 +181,10 @@
     margin: 0 10px;
   }
   section.section-content-six .contacts-items #contacts-form .js-fileName-six {
-    font-size: 14px;
+    font-size: 15px;
   }
   section.section-content-six .contacts-items #contacts-form .load {
-    font-size: 14px;
+    font-size: 15px;
     padding-left: 0;
   }
   section.section-content-six .contacts-items #contacts-form .label-form {
@@ -176,7 +195,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   #form-order-btn {
     -webkit-transform: none;
             transform: none;
@@ -286,7 +305,6 @@
   }
   #header-choise .header-choise-btn {
     padding-right: 100px;
-    padding-bottom: 22px;
     margin: 0;
   }
   #header-choise .one {
@@ -341,15 +359,28 @@
     font-size: 23px;
     text-align: center;
   }
-  #popylar-q {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
 }
 
-html body {
-  height: 100%;
-  overflow: hidden;
+@media screen and (max-height: 660px) {
+  html body {
+    height: 100%;
+    overflow: auto;
+  }
+  div.modal-content {
+    height: 100%;
+  }
+  section.section-content-six {
+    height: 100%;
+  }
+  section.section-content-six .contacs-heading {
+    margin-top: 50px;
+  }
+  section.section-content-six .contacs-heading p {
+    text-align: center;
+  }
+  div.menu__box.open {
+    overflow: auto;
+  }
 }
 
 .fullpage {
@@ -373,7 +404,7 @@ button:focus {
 
 .swiper {
   height: 100%;
-  width: 20%;
+  width: 25%;
 }
 
 .swiper-wrapper {
@@ -389,7 +420,7 @@ button:focus {
 header {
   margin: 0;
   position: absolute;
-  z-index: 1000;
+  z-index: 998;
   width: 100%;
 }
 
@@ -551,7 +582,6 @@ header .navbar .menu-items button {
   transition: transform .5s ease, -webkit-transform .5s ease;
   text-align: right;
   text-decoration: none;
-  color: #FFF;
 }
 
 .menu__box ul .langen {
@@ -576,7 +606,7 @@ header .navbar .menu-items button {
   transition: -webkit-transform 500ms ease-out;
   transition: transform 500ms ease-out;
   transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
-  z-index: 999999;
+  z-index: 1001;
   left: 90%;
   top: 20px;
   position: fixed;
@@ -640,7 +670,7 @@ header .navbar .menu-items button {
   right: 0;
   -webkit-transform: matrix(1, 0, 0, 1.03528, 0, 0);
           transform: matrix(1, 0, 0, 1.03528, 0, 0);
-  z-index: 100;
+  z-index: 1000;
 }
 
 .menu__item:hover {
@@ -683,6 +713,7 @@ header .navbar .menu-items button {
           justify-content: center;
   position: absolute;
   top: 50%;
+  width: 100%;
 }
 
 .section-content-one .description {
@@ -1026,8 +1057,8 @@ header .navbar .menu-items button {
   font-size: 33px;
   line-height: 40px;
   text-transform: uppercase;
-  margin-top: 180px;
-  margin-bottom: 100px;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 .section-content-three .reviews .reviews-content {
@@ -1640,7 +1671,7 @@ header .navbar .menu-items button {
       flex-wrap: wrap;
 }
 
-.section-content-six::after {
+.section-content-six::before {
   content: '';
   display: block;
   position: absolute;
@@ -1724,8 +1755,6 @@ header .navbar .menu-items button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .section-content-six .section-content-six-content .contacts-items .contacts .c-group .c-item {
@@ -1833,10 +1862,15 @@ header .navbar .menu-items button {
   line-height: 25px;
   height: 25px;
   margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .section-content-six .section-content-six-content .contacts-items .contacts-form .file .load {
-  padding-left: 170px;
   font-family: DIN Pro;
   font-style: normal;
   font-weight: normal;
@@ -1852,6 +1886,7 @@ header .navbar .menu-items button {
   border-radius: 100px;
   border: none;
   height: 50px;
+  width: 100%;
   -webkit-filter: drop-shadow(0px 2px 15px rgba(68, 117, 226, 0.5));
           filter: drop-shadow(0px 2px 15px rgba(68, 117, 226, 0.5));
   color: white;
@@ -1862,7 +1897,5 @@ header .navbar .menu-items button {
   line-height: 22px;
   text-align: center;
   text-transform: uppercase;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -193,3 +193,10 @@ $(document).ready(function () {
          $(this).addClass('header-choise-btn--active') } // а этой ссылке добавляем
   );     
 });
+$(document).ready(function () {
+  var planet = document.querySelector(".reviews-planet");
+  if ($(window).width() < 1200 || $(window).height() < 660){
+    $('.fullpage').removeAttr('data-fs-scroll');
+    planet.style.display = "none"
+  }
+});

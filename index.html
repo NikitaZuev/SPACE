@@ -43,17 +43,17 @@
           </nav>
         </header>
         <section class="section section0 section-content-one">
-          <div class="main col-12 col-lg-12 big-logo">
+          <div class="main big-logo">
             <img src="../img/big-logo.svg">
           </div>
           <div class="description">
             <div class="text_box">
-              <h2>
+              <h1>
                 <span class="word " id="word">Сайты</span>
                 <span class="word " id="word">презентации</span>
                 <span class="word " id="word">3D&ensp;моделирование</span>
                 <span class="word " id="word">графический&ensp;дизайн</span>
-              </h2>
+              </h1>
             </div>
             <p id="text_box_text">Комплексное продвижение и поддержка проектов</p>
           </div>
@@ -177,12 +177,12 @@
               <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne-first">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-first" aria-expanded="true" aria-controls="collapseOne-first">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-first" aria-expanded="false" aria-controls="collapseOne-first">
                       Как проходит работа?
                     </button>
                   </h2>
                 </div>
-                <div id="collapseOne-first" class="accordion-collapse collapse show" aria-labelledby="headingOne-first" >
+                <div id="collapseOne-first" class="accordion-collapse collapse " aria-labelledby="headingOne-first" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
                     Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.
                   </div>
@@ -194,7 +194,7 @@
                     </button>
                   </h2>
                 </div>
-                <div id="collapseTwo-first" class="accordion-collapse collapse" aria-labelledby="headingTwo-first" >
+                <div id="collapseTwo-first" class="accordion-collapse collapse" aria-labelledby="headingTwo-first" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
                     Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.
                   </div>
@@ -206,7 +206,7 @@
                     </button>
                   </h2>
                 </div>
-                <div id="collapseThree-first" class="accordion-collapse collapse" aria-labelledby="headingThree-first">
+                <div id="collapseThree-first" class="accordion-collapse collapse" aria-labelledby="headingThree-first" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
                     Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.
                   </div>
@@ -214,15 +214,15 @@
               </div>
             </div>
             <div class="popylar-q-three next">
-              <div class="accordion" id="accordionExample">
+              <div class="accordion" id="accordionExample1">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne-next">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-next" aria-expanded="true" aria-controls="collapseOne-next">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-next" aria-expanded="true" aria-controls="collapseOne-next">
                       Как проходит работа?
                     </button>
                   </h2>
                   </div>
-                  <div id="collapseOne-next" class="accordion-collapse collapse show" aria-labelledby="headingOne-next">
+                  <div id="collapseOne-next" class="accordion-collapse collapse " aria-labelledby="headingOne-next" data-bs-parent="#accordionExample1">
                     <div class="accordion-body">
                       Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.
                     </div>
@@ -234,7 +234,7 @@
                     </button>
                   </h2>
                   </div>
-                  <div id="collapseTwo-next" class="accordion-collapse collapse" aria-labelledby="headingTwo-next" >
+                  <div id="collapseTwo-next" class="accordion-collapse collapse" aria-labelledby="headingTwo-next" data-bs-parent="#accordionExample1">
                     <div class="accordion-body">
                       Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.
                     </div>
@@ -246,7 +246,7 @@
                     </button>
                   </h2>
                 </div>
-                <div id="collapseThree-next" class="accordion-collapse collapse" aria-labelledby="headingThree-next">
+                <div id="collapseThree-next" class="accordion-collapse collapse" aria-labelledby="headingThree-next" data-bs-parent="#accordionExample1">
                   <div class="accordion-body">
                     Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.Progressively monetize cost effective innovation vis-a-vis cross-unit infrastructures. Uniquely e-enable front-end core competencies vis-a-vis premier.
                   </div>
@@ -314,13 +314,13 @@
                     <textarea class="form-control input" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px"></textarea>
                     <label class="label-form" for="floatingTextarea2">Какая услуга вам необходима, пожалуйста опишите</label>
                   </div>
+                  <label class="form-control file"> 
+                    <input class="form-control " type="file" name="data[file]" id="form-six" placeholder="Загрузить" style="display: none; ">
+                    <span class="js-fileName-six">Загрузить файл (если нужно)</span> 
+                    <span class="load">Загрузить</span>
+                  </label>
+                  <button type="submit" class="accept">Отправить</button>
                 </form>
-                <label class="form-control file"> 
-                  <input class="form-control " type="file" name="data[file]" id="form-six" placeholder="Загрузить" style="display: none; ">
-                  <span class="js-fileName-six">Загрузить файл (если нужно)</span> 
-                  <span class="load">Загрузить</span>
-                </label>
-                <button type="submit" class="accept">Отправить</button>
               </div>
             </div>
           </div>
@@ -384,9 +384,9 @@
           </div>
         </div>
       </div>
+  <script src="js/jquery-3.3.1.js"></script>
   <script src="node_modules\swiper\swiper-bundle.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" ></script> 
-  <script src="js/jquery-3.3.1.js"></script>
   <script src="js/jquery.countimator.js"></script>
   <script src="js/jquery.ripples.js"></script>
   <script src="js/jquery.validate.js"></script>
