@@ -381,10 +381,16 @@
   div.menu__box.open {
     overflow: auto;
   }
+  section.section-content-three .swiper {
+    width: 70%;
+  }
 }
 
-.fullpage {
-  height: 100%;
+section {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
 }
 
 a {
@@ -679,12 +685,8 @@ header .navbar .menu-items button {
 }
 
 .section-content-one {
-  position: relative;
-  width: 100%;
   height: 100vh;
   background-image: url(../img/bg-section-one.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   overflow: hidden;
 }
 
@@ -880,12 +882,8 @@ header .navbar .menu-items button {
 }
 
 .section-content-two {
-  position: relative;
-  width: 100%;
   height: 100vh;
   background: url(../img/bg-section-two.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   overflow: hidden;
 }
 
@@ -912,7 +910,6 @@ header .navbar .menu-items button {
       -ms-flex-pack: center;
           justify-content: center;
   text-decoration: none;
-  color: #FFF;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
@@ -925,10 +922,6 @@ header .navbar .menu-items button {
   -webkit-transition: all .5s ease-out;
   transition: all .5s ease-out;
   z-index: 100;
-}
-
-.service__info:hover {
-  color: #FFF;
 }
 
 .service__info::after {
@@ -1018,21 +1011,13 @@ header .navbar .menu-items button {
   height: 100%;
 }
 
-.service__info_body {
-  z-index: 100;
-}
-
 .section-content-three {
-  position: relative;
-  width: 100%;
   height: 100%;
   background: url(../img/bg-section-threee.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
-  overflow: hidden;
   color: #FFF;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .section-content-three .reviews {
@@ -1048,6 +1033,7 @@ header .navbar .menu-items button {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  min-height: 100vh;
 }
 
 .section-content-three .reviews h2 {
@@ -1486,11 +1472,7 @@ header .navbar .menu-items button {
 }
 
 .section-content-five {
-  position: relative;
-  width: 100%;
   height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
   color: #FFF;
   background: -webkit-gradient(linear, left top, left bottom, from(#010003), color-stop(29.17%, #07041E), color-stop(30.73%, #07041E), color-stop(50.52%, #111C4D), color-stop(75.52%, #07041E), to(#010206)), #000001;
@@ -1517,6 +1499,7 @@ header .navbar .menu-items button {
   height: 100%;
   margin: auto;
   padding: 25px 0;
+  min-height: 100vh;
 }
 
 .section-content-five .section-content-five-content .popylar-q-text {
@@ -1649,11 +1632,7 @@ header .navbar .menu-items button {
 }
 
 .section-content-six {
-  position: relative;
-  width: 100%;
   height: 100vh;
-  background-size: cover !important;
-  background-repeat: no-repeat;
   background-position: center center;
   overflow: hidden;
   color: #FFF;
@@ -1698,13 +1677,9 @@ header .navbar .menu-items button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .section-content-six .section-content-six-content .contacs-heading {
-  width: 100%;
-  text-align: left;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;

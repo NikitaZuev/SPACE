@@ -117,7 +117,6 @@
       p
         text-align: center
     .contacts-items
-      
       #contacts
         width: 100%
         .c-item
@@ -268,11 +267,15 @@
         text-align: center
   div.menu__box.open
     overflow: auto
+  section.section-content-three 
+    .swiper
+      width: 70%
 
-
-
-.fullpage
-  height: 100%
+section
+  position: relative
+  background-size: cover
+  background-repeat: no-repeat
+  width: 100%
 a
   color: #fff
   text-decoration: none
@@ -460,12 +463,8 @@ header
   &:hover
     transform: translateX(-20px)
 .section-content-one
-  position: relative
-  width: 100%
   height: 100vh
   background-image: url(../img/bg-section-one.png)
-  background-size: cover
-  background-repeat: no-repeat
   overflow: hidden
   &::after
     content: ""
@@ -587,12 +586,8 @@ header
   100% 
     transform: translateY(0%)   
 .section-content-two
-  position: relative
-  width: 100%
   height: 100vh
   background: url(../img/bg-section-two.png)
-  background-size: cover
-  background-repeat: no-repeat
   overflow: hidden
 .service
   display: flex
@@ -605,7 +600,6 @@ header
   align-items: center;
   justify-content: center;
   text-decoration: none
-  color: #FFF
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
@@ -617,8 +611,6 @@ header
   height: 100%
   transition: all .5s ease-out
   z-index: 100
-  &:hover
-    color: #FFF
   &::after
     content: ""
     display: block;
@@ -684,20 +676,15 @@ header
     right: 100%;
     top: 0;
     height: 100%;
-.service__info_body
-  z-index: 100
+
 
 .section-content-three
-  position: relative
-  width: 100%
   height: 100%
   background: url(../img/bg-section-threee.png)
-  background-size: cover
-  background-repeat: no-repeat
   background-position: center center
-  overflow: hidden
   color: #FFF
   min-height: 100vh
+  overflow: hidden
   .reviews
     display: flex
     height: 100%
@@ -705,6 +692,7 @@ header
     align-items: center
     justify-content: space-around;
     flex-wrap: wrap
+    min-height: 100vh
     h2
       font-family: Montserrat;
       font-style: normal;
@@ -967,11 +955,7 @@ header
 
 
 .section-content-five
-  position: relative
-  width: 100%
   height: 100%
-  background-size: cover
-  background-repeat: no-repeat
   background-position: center center
   color: #FFF
   background: linear-gradient(180deg, #010003 0%, #07041E 29.17%, #07041E 30.73%, #111C4D 50.52%, #07041E 75.52%, #010206 100%), #000001;
@@ -986,6 +970,7 @@ header
     height: 100%
     margin: auto
     padding: 25px 0
+    min-height: 100vh
     .popylar-q-text
       display: flex
       font-family: Montserrat;
@@ -995,6 +980,7 @@ header
       line-height: 40px;
       text-transform: uppercase; 
       margin-bottom: 100px;
+      margin
     .popylar-q
       display: flex
       width: 100%;
@@ -1078,11 +1064,7 @@ header
           font-size: 18px;
           line-height: 22px;
 .section-content-six
-  position: relative
-  width: 100%
   height: 100vh
-  background-size: cover !important
-  background-repeat: no-repeat
   background-position: center center
   overflow: hidden
   color: #FFF
@@ -1108,10 +1090,7 @@ header
     flex-direction: column;
     height: 100%
     justify-content: center;
-    flex-wrap: wrap
     .contacs-heading
-      width: 100%;
-      text-align: left;
       font-family: Montserrat;
       font-style: normal;
       font-weight: 600;
